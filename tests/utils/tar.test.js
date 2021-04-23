@@ -7,7 +7,7 @@ import { checkMD5 } from '../utils';
 const { tarball, gitignoreToGlob } = _load('utils');
 const t = new Test();
 
-suite('tar');
+suite.only('tar');
 
 before(async function () {
     await t.setTmpFolder();
@@ -46,5 +46,5 @@ test('Positive: gitignoreToGlob', async function () {
 });
 
 after(async function () {
-    await t.cleanTmpFolder();
+    // await t.cleanTmpFolder();
 });
