@@ -6,6 +6,7 @@ import { resolveUrl } from '../utils';
 
 const mockLogger = { log: () => {} };
 
+/* istanbul ignore next */
 export default class API {
     constructor(url, auth, { timeout = 60 * 1000 } = {}) {
         this.url = new URL(url);

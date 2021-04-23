@@ -7,8 +7,8 @@ export async function checkError(promise, type, message) {
         await promise;
         assert.fail();
     } catch (error) {
-        assert.equal(error.name, type);
-        assert.equal(error.message, message);
+        assert.equal(error.name, type, error.toString());
+        assert.match(error.message, new RegExp(message), error.toString());
     }
 }
 

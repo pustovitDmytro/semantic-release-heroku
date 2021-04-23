@@ -13,7 +13,10 @@ export async function tarball(src, trg = os.tmpdir(), options = {}) {
     const outFile = `${trg}/${uuid.v4()}.tar`;
     const output = fs.createWriteStream(outFile);
     const archive = archiver('tar', {});
-    const ignore  = options.ignore || await gitignoreToGlob(path.join(src, '.gitignore')) || [ '.git/**', 'node_modules/**' ];
+    const ignore  = options.ignore
+    || await gitignore(path.join(src, '.herokuignore'))
+    || await gitignore(path.join(src, '.gitignore'))
+    || [ '.git/**', 'node_modules/**' ];
 
     const promise = new Promise((resolve, reject) => {
         output.on('close', resolve);
@@ -61,21 +64,19 @@ export function validate(data, rules) {
     return result;
 }
 
-
-async function gitignoreToGlob(filePath, dirsToCheck) {
+async function gitignore(filePath) {
     if (!await fs.exists(filePath)) return;
     const content = await fs.readFile(filePath, { encoding: 'utf8' });
 
-    return content
-        .split(/\r?\n/)
-        .map(s => s.trim())
+    return gitignoreToGlob(content.split(/\r?\n/).map(s => s.trim()));
+}
+
+export function gitignoreToGlob(lines) {
+    return lines
         .filter((pattern) => !!pattern && pattern[0] !== '#') // Filter out empty lines and comments.
         // Return pairt [ignoreFlag, pattern], we'll concatenate it later.
         .map(pattern =>
-        // '!' in .gitignore and glob mean opposite things so we need to swap it.
-            pattern[0] === '!'
-                ? [ '!', pattern.substring(1) ]
-                : [ '', pattern ],
+            pattern[0] === '!' ? [ '!', pattern.substring(1) ] : [ '', pattern ],
         // Filter out hidden files/directories (i.e. starting with a dot).
         ).filter((patternPair) => {
             const pattern = patternPair[1];
@@ -83,30 +84,13 @@ async function gitignoreToGlob(filePath, dirsToCheck) {
             return (
                 pattern.indexOf('/.') === -1 && pattern.indexOf('.') !== 0
             );
-        // There may be a lot of files outside of directories from `dirsToCheck`, don't ignore them wasting time.
-        }).filter((patternPair) => {
-            const pattern = patternPair[1];
-
-            return (
-                pattern[0] !== '/' ||
-                !dirsToCheck ||
-                new RegExp(`^/(?:${dirsToCheck.join('|')})(?:/|$)`).test(
-                    pattern,
-                )
-            );
-        // Patterns not starting with '/' are in fact "starting" with '**/'. Since that would
-        // catch a lot of files, restrict it to directories we check.
-        // Patterns starting with '/' are relative to the project directory and glob would
-        // treat them as relative to the OS root directory so strip the slash then.
         }).map((patternPair) => {
             const pattern = patternPair[1];
 
             if (pattern[0] !== '/') {
                 return [
                     patternPair[0],
-                    `${
-                        dirsToCheck ? `{${dirsToCheck}}/` : ''
-                    }**/${pattern}`
+                    `**/${pattern}`
                 ];
             }
 
