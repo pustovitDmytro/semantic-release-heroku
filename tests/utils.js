@@ -15,5 +15,5 @@ export async function checkError(promise, type, message) {
 export async function checkMD5(file, hash, message) {
     const buff = await fs.readFile(file);
 
-    assert.equal(md5(buff), hash, message);
+    assert.equal(md5(buff), hash, message, Buffer.byteLength(buff));
 }
