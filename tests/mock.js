@@ -1,6 +1,8 @@
 import sinon from 'sinon';
 import createAxiosError from 'axios/lib/core/createError';
-import API from '../src/heroku/HerokuApi';
+import { _load } from './entry';
+
+const { default: API } = _load('heroku/HerokuApi');
 
 function axiosResponse(data) {
     return { data };
