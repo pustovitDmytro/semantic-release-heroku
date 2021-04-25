@@ -7,7 +7,7 @@ import { checkMD5 } from '../utils';
 const { tarball, gitignoreToGlob } = _load('utils');
 const t = new Test();
 
-suite.only('tar');
+suite('tar');
 
 before(async function () {
     await t.setTmpFolder();
