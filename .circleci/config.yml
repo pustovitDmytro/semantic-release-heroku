@@ -33,6 +33,7 @@ aliases:
       - ~/.npm
       - node_modules
       - lib
+      - tmp
 
 version: 2
 debug: true

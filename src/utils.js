@@ -24,12 +24,14 @@ export async function tarball(src, trg = os.tmpdir(), options = {}) {
         archive.on('error', reject);
     });
 
+    archive.on('warning', e => console.error(e));
     archive.pipe(output);
     archive.glob('**', { cwd: src, ignore, matchBase: true });
     // archive.directory(src, false);
     archive.finalize();
 
     await promise;
+    await new Promise(res => setTimeout(res, 2000));
 
     return outFile;
 }
