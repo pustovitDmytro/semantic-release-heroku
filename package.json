@@ -74,6 +74,7 @@
     "lockfile-lint": "^4.6.2",
     "md5": "^2.3.0",
     "mocha": "^6.2.3",
+    "mocha-junit-reporter": "^2.0.0",
     "nyc": "^14.1.1",
     "rollup": "^2.45.2",
     "semantic-release": "^17.4.2",

@@ -31,7 +31,6 @@ export async function tarball(src, trg = os.tmpdir(), options = {}) {
     archive.finalize();
 
     await promise;
-    await new Promise(res => setTimeout(res, 2000));
 
     return outFile;
 }
