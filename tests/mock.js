@@ -26,6 +26,12 @@ class MOCK_API extends API {
                 'put_url' : 'http://ek.tr/ibebowohu'
             } });
         }
+        if (opts.url.match('conncection-error')) {
+            throw axiosError(opts, {
+                message : 'Not Found',
+                code    : 404
+            });
+        }
 
         return axiosResponse(1);
     }

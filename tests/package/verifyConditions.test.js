@@ -43,3 +43,19 @@ test('Positive: valid config', async function () {
         }
     );
 });
+
+test('Negative: cant connect heroku api', async function () {
+    await checkError(
+        verifyConditions.call(
+            {},
+            { name: 'conncection-error' },
+            {
+                cwd    : process.cwd(),
+                env    : { HEROKU_API_KEY: 'c5977e4b-970e-4965-aa69-85e781ab488c' },
+                logger : console
+            },
+        ),
+        'API_ERROR',
+        'Not Found'
+    );
+});
