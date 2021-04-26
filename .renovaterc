@@ -1,0 +1,27 @@
+{
+    "extends": [
+        "config:base",
+        ":semanticCommits",
+        ":semanticCommitScopeDisabled",
+        ":preserveSemverRanges",
+        ":pinDependencies",
+        ":prHourlyLimit1",
+        ":maintainLockFilesMonthly",
+        ":combinePatchMinorReleases"
+    ],
+    "packageRules": [
+        {
+            "matchPackagePatterns": [
+                "*"
+            ],
+            "semanticCommitType": "Chore"
+        },
+        {
+            "matchDepTypes": [
+                "dependencies",
+                "require"
+            ],
+            "semanticCommitType": "Fix"
+        }
+    ]
+}
