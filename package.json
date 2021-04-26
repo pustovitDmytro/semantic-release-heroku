@@ -84,8 +84,10 @@
   "dependencies": {
     "archiver": "^5.3.0",
     "axios": "^0.21.1",
+    "globby": "^11.0.3",
     "libnpmversion": "^1.2.0",
     "livr": "^2.3.3",
-    "livr-extra-rules": "^1.2.1"
+    "livr-extra-rules": "^1.2.1",
+    "tar-fs": "^2.1.1"
   }
 }

@@ -25,11 +25,11 @@ export class VALIDATION_FAILED extends SemanticReleaseHerokuError {
 
 export class API_ERROR extends SemanticReleaseHerokuError {
     get message() {
-        const message = this.payload.toString();
-        const inner  = this.payload?.response?.data;
+        const messages = [ this.payload.toString() ];
+        const inner  = this.payload.response?.data;
 
-        if (inner) return [ message, JSON.stringify(inner) ].join(' ');
+        if (inner) messages.push(JSON.stringify(inner));
 
-        return message;
+        return messages.join(' ');
     }
 }
