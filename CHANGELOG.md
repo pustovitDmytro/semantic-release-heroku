@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.0.0...v1.0.1) (2021-04-26)
+
+
+### Fix
+
+* Pin dependencies ([2d2c18f](https://github.com/pustovitDmytro/semantic-release-heroku/commit/2d2c18fb6a1ec9680233ed903d62f5cc715a26e4))
+
 # 1.0.0 (2021-04-26)
 
 
