@@ -66,7 +66,7 @@ if needed, the configuration can be extended:
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    ["@semantic-release/gitlab", {
+    ["semantic-release-heroku", {
       "name": "funny-app",
       "npmVersion": false,
       "tarballDir": "./dist"
