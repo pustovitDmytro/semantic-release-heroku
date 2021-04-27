@@ -1,6 +1,6 @@
 {
   "name": "semantic-release-heroku",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "boilerplate for creating npm packages",
   "main": "./lib",
   "scripts": {
@@ -82,11 +82,11 @@
     "uuid": "^3.4.0"
   },
   "dependencies": {
-    "axios": "^0.21.1",
-    "globby": "^11.0.3",
-    "libnpmversion": "^1.2.0",
-    "livr": "^2.3.3",
-    "livr-extra-rules": "^1.2.1",
-    "tar-fs": "^2.1.1"
+    "axios": "0.21.1",
+    "globby": "11.0.3",
+    "libnpmversion": "1.2.0",
+    "livr": "2.3.3",
+    "livr-extra-rules": "1.2.1",
+    "tar-fs": "2.1.1"
   }
 }
