@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.0.2...v1.0.3) (2021-04-27)
+
+
+### Docs
+
+* adds documentation ([f283a30](https://github.com/pustovitDmytro/semantic-release-heroku/commit/f283a30bc580dd0320251d199a6607b097fe2d96))
+
 ## [1.0.2](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.0.1...v1.0.2) (2021-04-27)
 
 
