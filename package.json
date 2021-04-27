@@ -1,9 +1,17 @@
 {
   "name": "semantic-release-heroku",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "plugin to publish a Heroku App using semantic-releases",
   "main": "./lib",
-  "keywords": ["semantic", "release", "heroku", "deploy", "ci", "push", "version"],
+  "keywords": [
+    "semantic",
+    "release",
+    "heroku",
+    "deploy",
+    "ci",
+    "push",
+    "version"
+  ],
   "scripts": {
     "prepare": "babel src --out-dir ./lib && husky install",
     "coveralls": "cat ./reports/coverage/lcov.info | coveralls",

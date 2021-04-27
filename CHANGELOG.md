@@ -1,3 +1,25 @@
+## [1.0.2](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.0.1...v1.0.2) (2021-04-27)
+
+
+### Chore
+
+* adds danger to circle-ci ([ae48ac3](https://github.com/pustovitDmytro/semantic-release-heroku/commit/ae48ac3120c89603fd452b79bc9245e65fdf56c9))
+* adds danger token to circle ([82f4156](https://github.com/pustovitDmytro/semantic-release-heroku/commit/82f4156f972af35775e72f9fca4c0ff374e5364b))
+* adds dummy line to calc coverage ([800de67](https://github.com/pustovitDmytro/semantic-release-heroku/commit/800de67b17a2a5899c2a43d9d16ea0f3774ed642))
+* Fixes danger-pr in circe-ci ([adff8b3](https://github.com/pustovitDmytro/semantic-release-heroku/commit/adff8b366b2dc50b880f3d5dedaa05bc8cd9152d))
+* fixes renovate config ([05c5bc5](https://github.com/pustovitDmytro/semantic-release-heroku/commit/05c5bc5a6d90da713d245663319d34cf6519df1f))
+* run pr workflow only for pull requests ([03e0b08](https://github.com/pustovitDmytro/semantic-release-heroku/commit/03e0b0880da9166c7a19fbf6ba171be65af6cbb5))
+* split circle ci jobs ([9f75a6b](https://github.com/pustovitDmytro/semantic-release-heroku/commit/9f75a6b8c1f9002302b367c7a58f5d85f007cc5d))
+* update .renovaterc to automerge after successfull checks ([2e76ceb](https://github.com/pustovitDmytro/semantic-release-heroku/commit/2e76ceb3dfe909955ef9e4a964312d794d41c4a8))
+* Update dependency eslint to v7 ([0e79e0f](https://github.com/pustovitDmytro/semantic-release-heroku/commit/0e79e0fa4b2ccb410fd5e6c4648d9280276aeba0))
+* Update semantic-release monorepo ([b7ab2b1](https://github.com/pustovitDmytro/semantic-release-heroku/commit/b7ab2b1ad472bc6b20d34cdf527704b3c62ea57b))
+* upgrade circle-ci to 2.1 ([fab79a9](https://github.com/pustovitDmytro/semantic-release-heroku/commit/fab79a93b2ba07dd088d9d89024b24d5a21f2ac3))
+
+### Docs
+
+* adds documentation ([9eb625b](https://github.com/pustovitDmytro/semantic-release-heroku/commit/9eb625bf68c1a60de86de82eabaa2484c8f1a035))
+* changes size-url ([ecc2fc2](https://github.com/pustovitDmytro/semantic-release-heroku/commit/ecc2fc29fa0ad2b353146d18fcf33747f5393230))
+
 ## [1.0.1](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.0.0...v1.0.1) (2021-04-26)
 
 
