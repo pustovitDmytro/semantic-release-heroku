@@ -1,5 +1,5 @@
 # semantic-release-heroku
-**semantic-release-heroku** boilerplate for creating npm packages.
+**semantic-release-heroku** [semantic-release][sr-url] plugin. Provides the ability to publish [Heroku][h-url] apps.
 
 [![Version][badge-vers]][npm]
 [![Bundle size][npm-size-badge]][npm-size-url]
@@ -33,18 +33,68 @@ To use library you need to have [node](https://nodejs.org) and [npm](https://www
 * node `6.0+`
 * npm `3.0+`
 
+This package is shipped as [semantic-release][sr-url] plugin, so you need to have semantic-release installed and configured.
+
 ## Installation
 
-To install the library run following command
+To install the library, run the following command:
 
 ```bash
-  npm i --save semantic-release-heroku
+  npm i --save-dev semantic-release-heroku
 ```
 
 ## Usage
 
-```javascript
+The plugin can be configured in the semantic-release [configuration file][sr-config]:
 
+```json
+{
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "semantic-release-heroku"
+  ]
+}
+```
+This is a minimal usage sample with default configuration. 
+### Configuration
+
+if needed, the configuration can be extended:
+
+```json
+{
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    ["@semantic-release/gitlab", {
+      "name": "funny-app",
+      "npmVersion": false,
+      "tarballDir": "./dist"
+    }]
+  ]
+}
+```
+Config attribute description:
+
+| Option | Required | Type | Description | Default |
+|----|---|---|------------------------------------|------------------------------------|
+| `name`          | no | ```string```  | Heroku application name.    | name from package.json |
+| `npmVersion`    | no | ```boolean``` | Whether to update package-json and package lock with new version value | ```false```, package.json won't be touched      |
+| `tarballDir`    | no |  ```string```  | Path to directory, where you can keep generated tarball. | Tarball will be generated into os /tmp directory |
+
+
+[sr-url]: https://github.com/semantic-release/semantic-release
+[sr-config]: https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#configuration
+[h-url]: https://www.heroku.com/home
+[h-profile]: https://dashboard.heroku.com/account
+
+### Authentication
+
+In order to publish stuff to heroku, you should obtain heroku api token. The easiest way to achive this is to open [profile page][h-profile] and reveal api key.
+
+If you already have an api key, add it as environment variable:
+```sh
+  HEROKU_API_KEY='<uuid>'
 ```
 
 ## Contribute
