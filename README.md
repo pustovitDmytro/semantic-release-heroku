@@ -2,7 +2,7 @@
 **semantic-release-heroku** boilerplate for creating npm packages.
 
 [![Version][badge-vers]][npm]
-[![Bundle size][npm-size-badge]][npm]
+[![Bundle size][npm-size-badge]][npm-size-url]
 [![Downloads][npm-downloads-badge]][npm]
 
 [![CodeFactor][codefactor-badge]][codefactor-url]
@@ -106,3 +106,4 @@ The message summary should be a one-sentence description of the change. The issu
 
 [npm-downloads-badge]: https://img.shields.io/npm/dw/semantic-release-heroku
 [npm-size-badge]: https://img.shields.io/bundlephobia/min/semantic-release-heroku
+[npm-size-url]: https://bundlephobia.com/result?p=semantic-release-heroku

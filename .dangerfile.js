@@ -9,7 +9,7 @@ const isOwner = danger.github.pr.user.login === danger.github.thisPR.owner;
 const modifiedList = danger.git.modified_files.join('\n\n- ');
 
 export default async function () {
-    message(`Changed Files in this PR: \n- ${modifiedList}`);
+    message(`Changed Files in this PR:\n\n- ${modifiedList}`);
 
     if (system.modified && !isOwner) {
         const files = system.getKeyedPaths().modified;
@@ -17,7 +17,7 @@ export default async function () {
         fail(`Only owner can change system files [${files.join(', ')}], please provide issue instead`, files[0]);
     }
 
-    if (!src.modified && !tests.modified) {
+    if (src.modified && !tests.modified) {
         warn('Source files were changed without tests');
     }
 
