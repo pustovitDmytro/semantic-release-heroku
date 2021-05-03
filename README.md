@@ -1,5 +1,5 @@
 # semantic-release-heroku
-**semantic-release-heroku** [semantic-release][sr-url] plugin. Provides the ability to publish [Heroku][h-url] apps.
+[semantic-release][sr-url] plugin. Provides the ability to publish [Heroku][h-url] apps.
 
 [![Version][badge-vers]][npm]
 [![Bundle size][npm-size-badge]][npm-size-url]
@@ -14,11 +14,10 @@
 
 [![Dependencies][badge-deps]][npm]
 [![Vulnerabilities][badge-vuln]](https://snyk.io/)
-[![Build Status][badge-tests]][travis]
+[![Build Status][tests-badge]][tests-url]
 [![Coverage Status][badge-coverage]][url-coverage]
 
 [![Commit activity][commit-activity-badge]][github]
-[![Fossa][fossa-badge]][fossa-url]
 [![License][badge-lic]][github]
 
 ## Table of Contents
@@ -121,21 +120,19 @@ The message summary should be a one-sentence description of the change. The issu
 
 [npm]: https://www.npmjs.com/package/semantic-release-heroku
 [github]: https://github.com/pustovitDmytro/semantic-release-heroku
-[travis]: https://travis-ci.org/pustovitDmytro/semantic-release-heroku
 [coveralls]: https://coveralls.io/github/pustovitDmytro/semantic-release-heroku?branch=master
 [badge-deps]: https://img.shields.io/david/pustovitDmytro/semantic-release-heroku.svg
-[badge-tests]: https://travis-ci.com/pustovitDmytro/semantic-release-heroku.svg?branch=master
 [badge-vuln]: https://img.shields.io/snyk/vulnerabilities/npm/semantic-release-heroku.svg?style=popout
 [badge-vers]: https://img.shields.io/npm/v/semantic-release-heroku.svg
 [badge-lic]: https://img.shields.io/github/license/pustovitDmytro/semantic-release-heroku.svg
 [badge-coverage]: https://coveralls.io/repos/github/pustovitDmytro/semantic-release-heroku/badge.svg?branch=master
 [url-coverage]: https://coveralls.io/github/pustovitDmytro/semantic-release-heroku?branch=master
 
+[tests-badge]: https://img.shields.io/circleci/build/github/pustovitDmytro/semantic-release-heroku
+[tests-url]: https://app.circleci.com/pipelines/github/pustovitDmytro/semantic-release-heroku
+
 [codefactor-badge]: https://www.codefactor.io/repository/github/pustovitdmytro/semantic-release-heroku/badge
 [codefactor-url]: https://www.codefactor.io/repository/github/pustovitdmytro/semantic-release-heroku
-
-[fossa-badge]: https://app.fossa.com/api/projects/git%2Bgithub.com%2FpustovitDmytro%2Fsemantic-release-heroku.svg?type=shield
-[fossa-url]: https://app.fossa.com/projects/git%2Bgithub.com%2FpustovitDmytro%2Fsemantic-release-heroku?ref=badge_shield
 
 [commit-activity-badge]: https://img.shields.io/github/commit-activity/m/pustovitDmytro/semantic-release-heroku
 

@@ -13,7 +13,7 @@
     "version"
   ],
   "scripts": {
-    "prepare": "babel src --out-dir ./lib && husky install",
+    "prepare": "babel src --out-dir ./lib --copy-files && husky install",
     "coveralls": "cat ./reports/coverage/lcov.info | coveralls",
     "test:security": "npm audit && npm run test:lock",
     "test:lint": "eslint src bin tests",
@@ -60,7 +60,6 @@
     "@semantic-release/github": "^7.2.1",
     "@semantic-release/npm": "^7.0.0",
     "@semantic-release/release-notes-generator": "^9.0.0",
-    "babel-eslint": "^10.0.1",
     "babel-plugin-module-resolver": "^4.0.0",
     "chai": "^4.2.0",
     "chance": "^1.0.18",
@@ -70,13 +69,16 @@
     "danger": "^10.6.4",
     "docopt": "^0.6.2",
     "eslint": "^7.0.0",
+    "eslint-config-incredible": "^1.0.0",
     "eslint-config-webbylab": "^4.0.0",
+    "eslint-plugin-censor": "^1.2.0",
     "eslint-plugin-fetch": "0.0.1",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-more": "^1.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-more": "^1.0.3",
     "eslint-plugin-no-require-lodash": "^1.1.0",
     "eslint-plugin-prefer-spread": "^1.0.3",
     "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-security": "^1.4.0",
     "fs-extra": "^9.0.0",
     "husky": "^6.0.0",
     "jscpd": "^3.3.25",
@@ -87,8 +89,9 @@
     "nyc": "^15.0.0",
     "rollup": "^2.45.2",
     "semantic-release": "^17.4.2",
+    "semantic-release-telegram": "^1.0.1",
     "sinon": "^10.0.0",
-    "uuid": "^3.4.0"
+    "uuid": "^8.0.0"
   },
   "dependencies": {
     "axios": "0.21.1",
