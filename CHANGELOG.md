@@ -1,3 +1,44 @@
+# [1.1.0](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.0.3...v1.1.0) (2021-05-03)
+
+
+### chore
+
+* lock file maintenance ([3d31e43](https://github.com/pustovitDmytro/semantic-release-heroku/commit/3d31e434dcf757d4659f98e377f8b8ff163f0b60))
+
+### Chore
+
+* (refactor) removes dead code ([abc6970](https://github.com/pustovitDmytro/semantic-release-heroku/commit/abc6970e17cbe57702de03d5df7bc29a44f758a6))
+* adds CIRCLE_SKIP_DEPLOY variable ([231549d](https://github.com/pustovitDmytro/semantic-release-heroku/commit/231549dda35992edbe9732a2848ce6485994214c))
+* deploy ci as single command ([96c2800](https://github.com/pustovitDmytro/semantic-release-heroku/commit/96c280048128a9879c48d11d3b49b1f3ef60ca77))
+* exit code 0 when skip ([f6ee0bf](https://github.com/pustovitDmytro/semantic-release-heroku/commit/f6ee0bf8f6965f884165f1ebcf83c9ca9a19bb28))
+* fixes Breaking increment in semantic-release ([d1c4d53](https://github.com/pustovitDmytro/semantic-release-heroku/commit/d1c4d5314eb9921111d4e033ae59e1495e842fa3))
+* inverse logical condition ([65dd0ad](https://github.com/pustovitDmytro/semantic-release-heroku/commit/65dd0ad91e442702ae98993f21163d26270cd4ec))
+* telegram notifications on release ([3a8036a](https://github.com/pustovitDmytro/semantic-release-heroku/commit/3a8036a66d1ad82b978bbb356e0ac0cd1b1d1e46))
+* Update dependency eslint-plugin-more to v1 ([ac91bb9](https://github.com/pustovitDmytro/semantic-release-heroku/commit/ac91bb901c821c3b547ea009ca52f5844690251d))
+* Update dependency fs-extra to v9 ([13ceab6](https://github.com/pustovitDmytro/semantic-release-heroku/commit/13ceab61fa7f94aba5fdc7895e337b728b9a982c))
+* Update dependency mocha to v8 ([627a45b](https://github.com/pustovitDmytro/semantic-release-heroku/commit/627a45bd29e1b5fb1398f539633b54e76175563a))
+* Update dependency mocha to v8 ([9a3d634](https://github.com/pustovitDmytro/semantic-release-heroku/commit/9a3d6341335e5b87ac6172abfa9e9428a5da2ba1))
+* Update dependency nyc to v15 ([489d910](https://github.com/pustovitDmytro/semantic-release-heroku/commit/489d910ba403b2ef77bea6f4d083d1b8406bccc2))
+* Update dependency nyc to v15 ([1caf199](https://github.com/pustovitDmytro/semantic-release-heroku/commit/1caf199155baa1da46474ec231533a78865d6c19))
+* Update dependency uuid to v8 ([ebae34b](https://github.com/pustovitDmytro/semantic-release-heroku/commit/ebae34b9fc2a074d05600b0e6af2cf3279630508))
+* update semantic to use commit convention ([7e079b2](https://github.com/pustovitDmytro/semantic-release-heroku/commit/7e079b2eaeb424f55b591b124b7f998a092c0988))
+* use danger for internall pr ([d838ede](https://github.com/pustovitDmytro/semantic-release-heroku/commit/d838edef9a425510615b3405d49b8056176f23d8))
+* use incredible eslint config ([b03d74a](https://github.com/pustovitDmytro/semantic-release-heroku/commit/b03d74a4e8e9ee1dcecba72d2137d70dafbf8b73))
+
+### Docs
+
+* change travis badge to circle-ci ([ebabb61](https://github.com/pustovitDmytro/semantic-release-heroku/commit/ebabb61f19ac4413561d3ffd849f9392f1c60bb5))
+* fixes spellcheck ([776c734](https://github.com/pustovitDmytro/semantic-release-heroku/commit/776c7343c68094b84c95270090260d3b958e701c))
+* fixes spellcheck ([bc06d85](https://github.com/pustovitDmytro/semantic-release-heroku/commit/bc06d85a523a2977307c588ee6abe6152c66ef19))
+
+### New
+
+* adds context to circle-ci ([a3a1f33](https://github.com/pustovitDmytro/semantic-release-heroku/commit/a3a1f33a03d1c32b2d467cdce1d7ab3fb0b8ce8b))
+
+### Update
+
+* migrate to base-api-client ([3c8b639](https://github.com/pustovitDmytro/semantic-release-heroku/commit/3c8b639776ec7d202478fdeab3e2ecc62cff93c6))
+
 ## [1.0.3](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.0.2...v1.0.3) (2021-04-27)
 
 
