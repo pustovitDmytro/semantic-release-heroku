@@ -2,7 +2,7 @@ import os from 'os';
 import path from 'path';
 import tar from 'tar-fs';
 import fs from 'fs-extra';
-import uuid from 'uuid';
+import { v4 as uuid } from 'uuid';
 import LIVR         from 'livr';
 import extraRules   from 'livr-extra-rules';
 import { VALIDATION_FAILED } from './Error';
@@ -13,7 +13,7 @@ LIVR.Validator.registerDefaultRules(extraRules);
 
 export async function tarball(src, trg = os.tmpdir(), options = {}) {
     const { exclude = [ 'node_modules' ], include = [] } = options;
-    const outFile = `${trg}/${uuid.v4()}.tar`;
+    const outFile = `${trg}/${uuid()}.tar`;
     const output = fs.createWriteStream(outFile);
     const isGitIgnored = await globby.gitignore({
         cwd    : src,

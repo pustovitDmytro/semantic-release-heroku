@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import md5 from 'md5';
 import fs from 'fs-extra';
 import tar from 'tar-fs';
-import uuid from 'uuid';
+import { v4 as uuid } from 'uuid';
 import { tmpFolder } from './constants';
 
 export async function checkError(promise, type, message) {
@@ -17,7 +17,7 @@ export async function checkError(promise, type, message) {
 }
 
 async function extractTar(tarPath) {
-    const tmp = path.join(tmpFolder, uuid.v4());
+    const tmp = path.join(tmpFolder, uuid());
     const extract = tar.extract(tmp);
 
     await new Promise((res, rej) => {

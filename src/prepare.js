@@ -17,6 +17,7 @@ export default async function prepare(pluginConfig, { logger, nextRelease } = {}
         });
         logger.log(`Package version updated to ${nextRelease.version}`);
     }
+
     const tarPath = await tarball(this.verified.rootDir, undefined, { ignore: this.verified.ignore });
 
     this.verified.tarPath = tarPath;

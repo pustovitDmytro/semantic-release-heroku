@@ -26,8 +26,7 @@ test('Negative: fail on npm version', async function () {
     await checkError(
         prepare.call(
             { verified :
-                { name: 'name', npmVersion: true, rootDir: tmpFolder }
-            },
+                { name: 'name', npmVersion: true, rootDir: tmpFolder } },
             null,
             {
                 logger      : console,
@@ -46,8 +45,7 @@ test('Positive: keep tarball', async function () {
                     name       : 'name',
                     rootDir    : path.join(fixturesFolder, 'txt_file'),
                     tarballDir : tmpFolder
-                }
-        },
+                } },
         null,
         {
             logger      : console,

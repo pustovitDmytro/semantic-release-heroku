@@ -29,18 +29,22 @@ test('Positive: pack folder with .gitignore', async function () {
         path.join(fixturesFolder, 'gitignore', '.herokuignore'),
         path.join(fixturesFolder, 'gitignore', '.gitignore')
     );
+    try {
+        const file = await tarball(
+            path.join(fixturesFolder, 'gitignore'),
+            tmpFolder
+        );
 
-    const file = await tarball(
-        path.join(fixturesFolder, 'gitignore'),
-        tmpFolder
-    );
-
-    await fs.move(
-        path.join(fixturesFolder, 'gitignore', '.gitignore'),
-        path.join(fixturesFolder, 'gitignore', '.herokuignore')
-    );
-
-    await assert.isTarEqual(file, path.join(fixturesFolder, 'gitignore.tar'));
+        await assert.isTarEqual(file, path.join(fixturesFolder, 'gitignore.tar'));
+    // eslint-disable-next-line no-useless-catch
+    } catch (err) {
+        throw err;
+    } finally {
+        await fs.move(
+            path.join(fixturesFolder, 'gitignore', '.gitignore'),
+            path.join(fixturesFolder, 'gitignore', '.herokuignore')
+        );
+    }
 });
 
 after(async function () {

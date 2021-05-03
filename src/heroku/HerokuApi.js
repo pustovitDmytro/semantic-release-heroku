@@ -1,5 +1,5 @@
 import fs from 'fs-extra';
-import API from './Api';
+import API from 'base-api-client';
 
 export default class HerokuAPI extends API {
     constructor(name, ...opts) {

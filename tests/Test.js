@@ -1,5 +1,5 @@
 import fse from 'fs-extra';
-import uuid from 'uuid';
+import { v4 as uuid } from 'uuid';
 import './mock';
 import { createNamespace } from 'cls-hooked';
 import { tmpFolder, fixturesFolder } from './constants';
@@ -9,7 +9,7 @@ const context = createNamespace('__TEST__');
 beforeEach(function setClsFromContext() {
     const old = this.currentTest.fn;
 
-    this.currentTest._TRACE_ID = uuid.v4();
+    this.currentTest._TRACE_ID = uuid();
     this.currentTest.fn = function clsWrapper() {
         return new Promise((res, rej) => {
             context.run(() => {
