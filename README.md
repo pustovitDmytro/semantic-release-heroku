@@ -56,7 +56,7 @@ The plugin can be configured in the semantic-release [configuration file][sr-con
   ]
 }
 ```
-This is a minimal usage sample with default configuration. 
+This is a minimal usage sample with a default configuration. 
 ### Configuration
 
 if needed, the configuration can be extended:
@@ -79,7 +79,7 @@ Config attribute description:
 | Option | Required | Type | Description | Default |
 |----|---|---|------------------------------------|------------------------------------|
 | `name`          | no | ```string```  | Heroku application name.    | name from package.json |
-| `npmVersion`    | no | ```boolean``` | Whether to update package-json and package lock with new version value | ```false```, package.json won't be touched      |
+| `npmVersion`    | no | ```boolean``` | Whether to update package.json and package-lock with new version value | ```false```, package.json won't be touched      |
 | `tarballDir`    | no |  ```string```  | Path to directory, where you can keep generated tarball. | Tarball will be generated into os /tmp directory |
 
 
@@ -90,16 +90,16 @@ Config attribute description:
 
 ### Authentication
 
-In order to publish stuff to heroku, you should obtain heroku api token. The easiest way to achive this is to open [profile page][h-profile] and reveal api key.
+In order to publish stuff to Heroku, you should obtain the Heroku API token. The easiest way to achieve this is to open [profile page][h-profile] and reveal the API key.
 
-If you already have an api key, add it as environment variable:
+If you already have an API key, add it as an environment variable:
 ```sh
   HEROKU_API_KEY='<uuid>'
 ```
 
 ## Contribute
 
-Make the changes to the code and tests and then commit to your branch. Be sure to follow the commit message conventions.
+Make the changes to the code and tests. Then commit to your branch. Be sure to follow the commit message conventions.
 
 Commit message summaries must follow this basic format:
 ```
