@@ -22,14 +22,3 @@ export class VERIFICATION_MISSED extends SemanticReleaseHerokuError {
 export class VALIDATION_FAILED extends SemanticReleaseHerokuError {
     message = JSON.stringify(this.payload)
 }
-
-export class API_ERROR extends SemanticReleaseHerokuError {
-    get message() {
-        const messages = [ this.payload.toString() ];
-        const inner  = this.payload.response?.data;
-
-        if (inner) messages.push(JSON.stringify(inner));
-
-        return messages.join(' ');
-    }
-}
