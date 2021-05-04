@@ -1,3 +1,16 @@
+## [1.1.1](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.0...v1.1.1) (2021-05-04)
+
+
+### Chore
+
+* adds pr context ([ce163d9](https://github.com/pustovitDmytro/semantic-release-heroku/commit/ce163d98af7e779af2242418b9d4fe18deeffb36))
+* fixes ci ([0576a01](https://github.com/pustovitDmytro/semantic-release-heroku/commit/0576a013f537d21591b13214c3cf2c1cf33bfa79))
+* Update dependency fs-extra to v10 ([326dd28](https://github.com/pustovitDmytro/semantic-release-heroku/commit/326dd28df67a5a9cd81ffa52a8c9c430b3274455))
+
+### Upgrade
+
+* Pin dependency base-api-client to 1.2.0 ([9927255](https://github.com/pustovitDmytro/semantic-release-heroku/commit/9927255fe6f9b6fa593965443b6b58024e987823))
+
 # [1.1.0](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.0.3...v1.1.0) (2021-05-03)
 
 
