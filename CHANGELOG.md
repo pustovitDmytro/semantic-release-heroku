@@ -1,3 +1,18 @@
+## [1.1.2](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.1...v1.1.2) (2021-05-05)
+
+
+### Chore
+
+* adds trusted bots to danger ([892f4a1](https://github.com/pustovitDmytro/semantic-release-heroku/commit/892f4a12a0084464da137d25b1a027e4afb808bd))
+* Update dependency @rollup/plugin-node-resolve to v13 ([b9601da](https://github.com/pustovitDmytro/semantic-release-heroku/commit/b9601da8ecd0b9dbc78ccd89c8a479360a64b2e6))
+* Update dependency fs-extra to v10 ([a0adecc](https://github.com/pustovitDmytro/semantic-release-heroku/commit/a0adecc6b0b58e877bb64aff29e9a42bdc8a9d71))
+* Update issue templates ([8fdb1af](https://github.com/pustovitDmytro/semantic-release-heroku/commit/8fdb1af8db2dbb2cd8912bef867d62b95781fc56))
+* Update pr template ([1d4eb34](https://github.com/pustovitDmytro/semantic-release-heroku/commit/1d4eb34da6085757d1707db0c440c6e245c3e2e3))
+
+### Upgrade
+
+* Update dependency base-api-client to v1.2.1 ([9e3fad7](https://github.com/pustovitDmytro/semantic-release-heroku/commit/9e3fad71b17be98006225dd05bc4346fa5f1bda8))
+
 ## [1.1.1](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.0...v1.1.1) (2021-05-04)
 
 
