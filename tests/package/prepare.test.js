@@ -1,10 +1,10 @@
 // import { assert } from 'chai';
 import path from 'path';
-import { _load } from '../entry';
+import Test, { load, tmpFolder, fixturesFolder } from '../Test';
 import { checkError } from '../utils';
-import  Test, { tmpFolder, fixturesFolder } from '../Test';
 
-const { default: prepare } = _load('prepare');
+
+const { default: prepare } = load('prepare');
 
 suite('prepare');
 

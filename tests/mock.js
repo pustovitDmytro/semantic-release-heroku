@@ -1,9 +1,9 @@
 /* eslint-disable security/detect-object-injection */
 import sinon from 'sinon';
-import { _load } from './entry';
 import API_ERROR from 'base-api-client/lib/Error';
+import { load } from './Test';
 
-const { default: API } = _load('heroku/HerokuApi');
+const { default: API } = load('heroku/HerokuApi');
 
 function axiosResponse(data) {
     return { data };

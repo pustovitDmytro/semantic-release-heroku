@@ -1,8 +1,9 @@
+import path from 'path';
 import fse from 'fs-extra';
 import { v4 as uuid } from 'uuid';
-import './mock';
 import { createNamespace } from 'cls-hooked';
-import { tmpFolder, fixturesFolder } from './constants';
+import { tmpFolder, fixturesFolder, entry } from './constants';
+import './mock';
 
 const context = createNamespace('__TEST__');
 
@@ -20,7 +21,6 @@ beforeEach(function setClsFromContext() {
                     id    : this.test._TRACE_ID
                 });
 
-                // eslint-disable-next-line more/no-then
                 Promise.resolve(old.apply(this, arguments))
                     .then(res)
                     .catch(rej);
@@ -40,7 +40,19 @@ export default class Test {
     }
 }
 
+function load(relPath) {
+    // eslint-disable-next-line security/detect-non-literal-require
+    return require(path.join(entry, relPath));
+}
+
+function resolve(relPath) {
+    return require.resolve(path.join(entry, relPath));
+}
+
 export {
     tmpFolder,
-    fixturesFolder
+    fixturesFolder,
+    entry,
+    load,
+    resolve
 };

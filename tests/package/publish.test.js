@@ -1,10 +1,10 @@
 // import { assert } from 'chai';
 import path from 'path';
-import { _load } from '../entry';
+import { load, tmpFolder, fixturesFolder } from '../Test';
 import { checkError } from '../utils';
-import  { tmpFolder, fixturesFolder } from '../Test';
 
-const { default: publish } = _load('publish');
+
+const { default: publish } = load('publish');
 
 suite('publish');
 

@@ -1,11 +1,11 @@
 import path from 'path';
 import { assert } from 'chai';
 import fs from 'fs-extra';
-import { _load } from '../entry';
-import Test, { fixturesFolder, tmpFolder } from '../Test';
+import Test, { load, fixturesFolder, tmpFolder } from '../Test';
+
 import '../utils';
 
-const { tarball } = _load('utils');
+const { tarball } = load('utils');
 const t = new Test();
 
 suite('tar');

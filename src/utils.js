@@ -5,9 +5,8 @@ import fs from 'fs-extra';
 import { v4 as uuid } from 'uuid';
 import LIVR         from 'livr';
 import extraRules   from 'livr-extra-rules';
+import globby from 'globby';
 import { VALIDATION_FAILED } from './Error';
-
-const globby = require('globby');
 
 LIVR.Validator.registerDefaultRules(extraRules);
 
