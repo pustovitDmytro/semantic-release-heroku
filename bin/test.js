@@ -10,7 +10,7 @@ const doc =
 `Usage:
    test.js publish <name> <apiKey> <rootDir>
    test.js prepare <name> <apiKey> <rootDir>
-   test.js verifyConditions <name> <apiKey> <rootDir>
+   test.js verifyConditions <name> <apiKey> [<rootDir>]
    test.js -h | --help
 
 Options:
@@ -21,7 +21,7 @@ async function main(opts) {
     try {
         const name = opts['<name>'];
         const apiKey = opts['<apiKey>'];
-        const rootDir = opts['<rootDir>'];
+        const rootDir = opts['<rootDir>'] || process.cwd();
 
         if (opts.publish) {
             await publish.call(

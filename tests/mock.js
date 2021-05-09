@@ -31,9 +31,9 @@ class MOCK_API extends API {
 
         assert.exists(opts.headers);
         if (isCallToHeroku) {
-            assert.include(opts.headers.Authorization, 'Bearer');
-            assert.notInclude(opts.headers.Authorization, 'undefined');
-            assert.equal(opts.headers.Accept, 'application/vnd.heroku+json; version=3');
+            assert.include(opts.headers.authorization, 'Bearer');
+            assert.notInclude(opts.headers.authorization, 'undefined');
+            assert.equal(opts.headers.accept, 'application/vnd.heroku+json; version=3');
         } else {
             assert.exists(opts.headers['Content-Length']);
             assert.isEmpty(opts.headers['Content-Type']);

@@ -10,8 +10,8 @@ export default class HerokuAPI extends API {
 
     getHeaders() {
         return {
-            Accept        : 'application/vnd.heroku+json; version=3',
-            Authorization : `Bearer ${this.auth}`
+            accept        : 'application/vnd.heroku+json; version=3',
+            authorization : `Bearer ${this.auth}`
         };
     }
 
