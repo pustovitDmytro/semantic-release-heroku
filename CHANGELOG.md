@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.4...v1.1.5) (2021-05-09)
+
+
+### Fix
+
+* fixes sending token in headers ([5893595](https://github.com/pustovitDmytro/semantic-release-heroku/commit/5893595071187234f3445a1259a178d09cb573c5))
+
 ## [1.1.4](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.3...v1.1.4) (2021-05-08)
 
 
