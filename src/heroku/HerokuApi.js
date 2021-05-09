@@ -5,13 +5,13 @@ export default class HerokuAPI extends API {
     constructor(name, apiKey) {
         super('https://api.heroku.com/');
         this.name = name;
-        this.auth = apiKey;
+        this.apiKey = apiKey;
     }
 
     getHeaders() {
         return {
             accept        : 'application/vnd.heroku+json; version=3',
-            authorization : `Bearer ${this.auth}`
+            authorization : `Bearer ${this.apiKey}`
         };
     }
 

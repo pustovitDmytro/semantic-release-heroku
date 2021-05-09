@@ -25,7 +25,12 @@ async function main(opts) {
 
         if (opts.publish) {
             await publish.call(
-                { verified: { name, apiKey, rootDir: path.resolve(rootDir) } },
+                { verified : {
+                    name,
+                    apiKey,
+                    rootDir : path.resolve(rootDir),
+                    tarPath : path.resolve(rootDir, 'verson.tar')
+                } },
                 {},
                 { logger: console, nextRelease: { version: '1.0.1' } }
             );
@@ -57,6 +62,7 @@ async function main(opts) {
         process.exit(0);
     } catch (error) {
         console.error(error);
+        console.log(error.payload.request.getHeaders());
         process.exit(1);
     }
 }
