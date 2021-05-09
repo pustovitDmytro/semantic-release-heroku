@@ -1,3 +1,10 @@
+## [1.1.6](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.5...v1.1.6) (2021-05-09)
+
+
+### Fix
+
+* use lowercase headers due to axios transformations ([931f253](https://github.com/pustovitDmytro/semantic-release-heroku/commit/931f253d78e2373c5041675db07de1435a0de671))
+
 ## [1.1.5](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.4...v1.1.5) (2021-05-09)
 
 
