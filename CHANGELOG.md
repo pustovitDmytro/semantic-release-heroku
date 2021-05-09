@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.6...v1.1.7) (2021-05-09)
+
+
+### Fix
+
+* dont use reserved auth keyword ([7626377](https://github.com/pustovitDmytro/semantic-release-heroku/commit/762637765cd235767c3f7b42a042a0d64f835605))
+
 ## [1.1.6](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.5...v1.1.6) (2021-05-09)
 
 
