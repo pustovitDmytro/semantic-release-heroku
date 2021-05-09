@@ -2,12 +2,13 @@ import fs from 'fs-extra';
 import API from 'base-api-client';
 
 export default class HerokuAPI extends API {
-    constructor(name, ...opts) {
-        super(...opts);
+    constructor(name, apiKey) {
+        super('https://api.heroku.com/');
         this.name = name;
+        this.auth = apiKey;
     }
 
-    _getHeaders() {
+    getHeaders() {
         return {
             Accept        : 'application/vnd.heroku+json; version=3',
             Authorization : `Bearer ${this.auth}`

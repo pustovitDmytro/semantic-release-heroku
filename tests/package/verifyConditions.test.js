@@ -1,7 +1,6 @@
 // import { assert } from 'chai';
 import { assert } from 'chai';
-import { load } from '../Test';
-import { checkError } from '../utils';
+import { load, getTraces, checkError } from '../Test';
 
 const { default: verifyConditions } = load('verifyConditions');
 
@@ -43,6 +42,15 @@ test('Positive: valid config', async function () {
             rootDir : process.cwd()
         }
     );
+
+    const apiCalls = getTraces();
+
+    assert.lengthOf(apiCalls, 1);
+    assert.deepOwnInclude(apiCalls[0], {
+        method : 'GET',
+        url    : 'apps/package-name',
+        api    : 'HerokuAPI'
+    });
 });
 
 test('Negative: cant connect heroku api', async function () {

@@ -3,7 +3,7 @@ import Api from './HerokuApi';
 
 export default class Heroku {
     constructor(name, apiKey, logger) {
-        this.api = new Api(name, 'https://api.heroku.com/', apiKey);
+        this.api = new Api(name, apiKey);
         this.logger = logger;
     }
 

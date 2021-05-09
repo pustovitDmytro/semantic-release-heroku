@@ -4,7 +4,9 @@ import md5 from 'md5';
 import fs from 'fs-extra';
 import tar from 'tar-fs';
 import { v4 as uuid } from 'uuid';
+import { getNamespace } from 'cls-hooked';
 import { tmpFolder } from './constants';
+import { traces } from './mock';
 
 export async function checkError(promise, type, message) {
     try {
@@ -59,3 +61,9 @@ assert.isTarEqual = async function (actualPath, expectedPath) {
         assert.equal(md5(actBuff), md5(expBuff), f);
     }));
 };
+
+export function getTraces() {
+    const traceID = getNamespace('__TEST__').get('current').id;
+
+    return traces.filter(t => t.type === 'requestSent' && t.traceId === traceID);
+}
