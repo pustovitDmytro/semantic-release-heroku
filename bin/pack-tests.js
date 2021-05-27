@@ -15,12 +15,15 @@ const DIR = path.resolve('./tmp/package-tests');
 
 const COPY = [
     [ 'tests/init.js',  'tests-init.js' ],
-
+    [ 'tests/fixtures', 'fixtures' ],
     [ '.mocharc.bundle.json', '.mocharc.json' ]
 ];
 
 const TEST_MODULES = [
-    'mocha'
+    'mocha',
+    'cls-hooked',
+    'tar-fs',
+    'uuid'
 ];
 
 const resolveIgnoreRegexp = `^(?!${TEST_MODULES.join('|')}).*$`;
