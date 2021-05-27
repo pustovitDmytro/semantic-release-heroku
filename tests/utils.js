@@ -4,9 +4,7 @@ import md5 from 'md5';
 import fs from 'fs-extra';
 import tar from 'tar-fs';
 import { v4 as uuid } from 'uuid';
-import { getNamespace } from 'cls-hooked';
-import { tmpFolder } from './constants';
-import { traces } from './mock';
+import { tmpFolder, entry } from './constants';
 
 export async function checkError(promise, type, message) {
     try {
@@ -39,7 +37,7 @@ export async function getFiles(dir) {
         return (await fs.stat(res)).isDirectory() ? getFiles(res) : res;
     }));
 
-    return files.reduce((a, f) => a.concat(f), []);
+    return files.flat();
 }
 
 assert.isTarEqual = async function (actualPath, expectedPath) {
@@ -62,8 +60,18 @@ assert.isTarEqual = async function (actualPath, expectedPath) {
     }));
 };
 
-export function getTraces() {
-    const traceID = getNamespace('__TEST__').get('current').id;
+export function load(relPath, clearCache) {
+    const absPath = path.resolve(entry, relPath);
 
-    return traces.filter(t => t.type === 'requestSent' && t.traceId === traceID);
+    if (clearCache) delete require.cache[require.resolve(absPath)];
+    // eslint-disable-next-line security/detect-non-literal-require
+    const result =  require(absPath);
+
+    if (clearCache) delete require.cache[require.resolve(absPath)];
+
+    return result;
+}
+
+export function resolve(relPath) {
+    return require.resolve(path.join(entry, relPath));
 }

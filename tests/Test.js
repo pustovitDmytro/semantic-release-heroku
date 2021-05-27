@@ -1,9 +1,12 @@
-import path from 'path';
 import fse from 'fs-extra';
-import { tmpFolder, fixturesFolder, entry } from './constants';
-import './mock';
+import { getNamespace } from 'cls-hooked';
+import { tmpFolder } from './constants';
+import { traces } from './mock';
 import './init-hooks';
-// import * as utils from './utils';
+
+
+export * from './utils';
+export * from './constants';
 
 export default class Test {
     async setTmpFolder() {
@@ -14,23 +17,10 @@ export default class Test {
     async cleanTmpFolder() {
         await fse.remove(tmpFolder);
     }
+
+    getTraces() {
+        const traceID = getNamespace('__TEST__').get('current').id;
+
+        return traces.filter(t => t.type === 'requestSent' && t.traceId === traceID);
+    }
 }
-
-function load(relPath) {
-    // eslint-disable-next-line security/detect-non-literal-require
-    return require(path.join(entry, relPath));
-}
-
-function resolve(relPath) {
-    return require.resolve(path.join(entry, relPath));
-}
-
-export {
-    tmpFolder,
-    fixturesFolder,
-    entry,
-    load,
-    resolve
-};
-
-export * from './utils';

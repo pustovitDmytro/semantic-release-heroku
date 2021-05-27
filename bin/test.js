@@ -38,7 +38,7 @@ async function main(opts) {
 
         if (opts.verifyConditions) {
             await verifyConditions.call(
-                {  },
+                {},
                 { name, npmVersion: true, tarballDir: '.' },
                 {
                     logger : console,
@@ -51,7 +51,7 @@ async function main(opts) {
         if (opts.prepare) {
             await prepare.call(
                 { verified: { name, tarballDir: '.', rootDir: path.resolve(rootDir) } },
-                { },
+                {},
                 {
                     logger      : console,
                     nextRelease : { version: '1.0.2' }

@@ -1,11 +1,15 @@
-import verifyConditions from './verifyConditions';
-import publish from './publish';
-import prepare from './prepare';
+import verifyConditionsFn from './verifyConditions';
+import publishFn from './publish';
+import prepareFn from './prepare';
 
 const context = {};
 
-module.exports = {
-    verifyConditions : verifyConditions.bind(context),
-    publish          : publish.bind(context),
-    prepare          : prepare.bind(context)
+const verifyConditions = verifyConditionsFn.bind(context);
+const publish          = publishFn.bind(context);
+const prepare          = prepareFn.bind(context);
+
+export {
+    verifyConditions,
+    publish,
+    prepare
 };

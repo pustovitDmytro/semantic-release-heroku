@@ -1,10 +1,10 @@
 import path from 'path';
 import { assert } from 'chai';
-import { load, tmpFolder, fixturesFolder, getTraces } from '../Test';
+import Tests, { load, tmpFolder, fixturesFolder } from '../Test';
 import { checkError } from '../utils';
 
-
 const { default: publish } = load('publish');
+const factory = new Tests();
 
 suite('publish');
 
@@ -55,7 +55,7 @@ test('Positive: deploy to heroku', async function () {
         }
     );
 
-    const apiCalls = getTraces();
+    const apiCalls = factory.getTraces();
 
     assert.lengthOf(apiCalls, 3);
 });

@@ -3,7 +3,7 @@ import sinon from 'sinon';
 import API_ERROR from 'base-api-client/lib/Error';
 import { assert } from 'chai';
 import { getNamespace } from 'cls-hooked';
-import { load } from './Test';
+import { load } from './utils';
 
 const { default: API } = load('heroku/HerokuApi');
 
@@ -19,6 +19,7 @@ function axiosError(message, data) {
     return new API_ERROR(err);
 }
 
+// eslint-disable-next-line sonarjs/no-unused-collection
 export const traces = [];
 
 class MOCK_API extends API {

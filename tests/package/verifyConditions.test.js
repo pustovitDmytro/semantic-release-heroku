@@ -1,6 +1,9 @@
+/* eslint-disable unicorn/filename-case */
 // import { assert } from 'chai';
 import { assert } from 'chai';
-import { load, getTraces, checkError } from '../Test';
+import Test, { load, checkError } from '../Test';
+
+const factory = new Test();
 
 const { default: verifyConditions } = load('verifyConditions');
 
@@ -43,7 +46,7 @@ test('Positive: valid config', async function () {
         }
     );
 
-    const apiCalls = getTraces();
+    const apiCalls = factory.getTraces();
 
     assert.lengthOf(apiCalls, 1);
     assert.deepOwnInclude(apiCalls[0], {
