@@ -1,3 +1,10 @@
+## [1.1.11](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.10...v1.1.11) (2021-05-28)
+
+
+### Fix
+
+* fixes windows compartibility ([d621f5d](https://github.com/pustovitDmytro/semantic-release-heroku/commit/d621f5dc00c93259fc0c06b452f7d533edd510c3))
+
 ## [1.1.10](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.9...v1.1.10) (2021-05-27)
 
 
