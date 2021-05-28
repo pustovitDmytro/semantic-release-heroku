@@ -18,6 +18,7 @@ export async function tarball(src, trg = os.tmpdir(), options = {}) {
         cwd    : src,
         ignore : include
     });
+
     const isNotExcluded = await globby('**', {
         followSymbolicLinks : false,
         onlyFiles           : false,
@@ -26,10 +27,10 @@ export async function tarball(src, trg = os.tmpdir(), options = {}) {
         cwd                 : src,
         ignore              : exclude
     });
-
+    const osNormalized = new Set(isNotExcluded.map(p => path.normalize(p)));
     const pack = tar.pack(src, {
         ignore(name) {
-            return isGitIgnored(name) || !isNotExcluded.includes(path.relative(src, name));
+            return isGitIgnored(name) || !osNormalized.has(path.relative(src, name));
         }
     });
 

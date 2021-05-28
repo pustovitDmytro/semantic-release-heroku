@@ -37,7 +37,8 @@ export async function getFiles(dir) {
         return (await fs.stat(res)).isDirectory() ? getFiles(res) : res;
     }));
 
-    return files.flat();
+    // eslint-disable-next-line unicorn/no-array-reduce, unicorn/prefer-spread
+    return files.reduce((a, f) => a.concat(f), []);
 }
 
 assert.isTarEqual = async function (actualPath, expectedPath) {
