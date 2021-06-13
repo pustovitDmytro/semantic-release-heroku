@@ -1,0 +1,6 @@
+{
+    "dir": "tmp/package-tests",
+    "modules": [ "cls-hooked", "tar-fs", "uuid" ],
+    "copy": [[ "tests/fixtures", "fixtures" ]],
+    "copyDefaultFiles": true
+}
