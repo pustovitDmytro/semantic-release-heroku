@@ -145,5 +145,5 @@ Make the changes to the code and tests. Then commit to your branch. Be sure to f
 [appveyor-badge]: https://ci.appveyor.com/api/projects/status/9qu5eo8au95gs5om/branch/master?svg=true
 [appveyor-url]: https://ci.appveyor.com/project/pustovitDmytro/semantic-release-heroku/branch/master
 
-[fossa-badge]: https://app.fossa.com/api/projects/custom%2B24828%2Fnpm-boilerplate.svg?type=shield
-[fossa-url]: https://app.fossa.com/projects/custom%2B24828%2Fnpm-boilerplate?ref=badge_shield
+[fossa-badge]: https://app.fossa.com/api/projects/custom%2B24828%2Fsemantic-release-heroku.svg?type=shield
+[fossa-url]: https://app.fossa.com/projects/custom%2B24828%2Fsemantic-release-heroku?ref=badge_shield
