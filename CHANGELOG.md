@@ -1,3 +1,14 @@
+## [1.1.14](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.13...v1.1.14) (2021-06-14)
+
+
+### Chore
+
+* removes unused devDependencies ([ddb100a](https://github.com/pustovitDmytro/semantic-release-heroku/commit/ddb100aa634ab2e1d2695de73d9aeb4a7795ccce))
+
+### Docs
+
+* fixes fossa badge ([b21c942](https://github.com/pustovitDmytro/semantic-release-heroku/commit/b21c9425865076f7dc986a12791e5e25cf73b806))
+
 ## [1.1.13](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.12...v1.1.13) (2021-06-13)
 
 
