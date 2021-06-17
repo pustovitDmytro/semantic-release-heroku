@@ -1,3 +1,14 @@
+## [1.1.15](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.14...v1.1.15) (2021-06-17)
+
+
+### Chore
+
+* Update dependency eslint-plugin-regexp to ^0.12.0 ([41b7f91](https://github.com/pustovitDmytro/semantic-release-heroku/commit/41b7f919108f29f604f64d7ac3e6a04488be2c7b))
+
+### Upgrade
+
+* Update dependency base-api-client to v1.4.5 ([ca25de1](https://github.com/pustovitDmytro/semantic-release-heroku/commit/ca25de11f2e1dbea520362221917c0351377a943))
+
 ## [1.1.14](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.13...v1.1.14) (2021-06-14)
 
 
