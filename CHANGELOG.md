@@ -1,3 +1,10 @@
+## [1.1.16](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.15...v1.1.16) (2021-06-19)
+
+
+### Upgrade
+
+* Update dependency globby to v11.0.4 ([c31e018](https://github.com/pustovitDmytro/semantic-release-heroku/commit/c31e0185f2d713fa0cd32883ae3359d5d3137206))
+
 ## [1.1.15](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.14...v1.1.15) (2021-06-17)
 
 
