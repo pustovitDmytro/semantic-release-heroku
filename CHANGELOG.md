@@ -1,3 +1,10 @@
+## [1.1.17](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.16...v1.1.17) (2021-06-19)
+
+
+### Upgrade
+
+* Update dependency libnpmversion to v1.2.1 ([89709a9](https://github.com/pustovitDmytro/semantic-release-heroku/commit/89709a96ca1b0811a63ddf73db4c9c7a5fc5e443))
+
 ## [1.1.16](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.15...v1.1.16) (2021-06-19)
 
 
