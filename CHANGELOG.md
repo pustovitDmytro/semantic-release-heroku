@@ -1,3 +1,17 @@
+## [1.1.18](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.17...v1.1.18) (2021-07-17)
+
+
+### Chore
+
+* Update dependency eslint-plugin-regexp to ^0.13.0 ([035b528](https://github.com/pustovitDmytro/semantic-release-heroku/commit/035b528e46f2f0aae6fddf32d6feb91cddf9055e))
+* Update dependency eslint-plugin-sonarjs to ^0.9.0 ([fa136c1](https://github.com/pustovitDmytro/semantic-release-heroku/commit/fa136c144ef07e32ed8ace23b9a5ebea2760f1eb))
+* Update dependency eslint-plugin-unicorn to v34 (#33) ([5f3fd22](https://github.com/pustovitDmytro/semantic-release-heroku/commit/5f3fd22ef7328f99dbea0682cb1e3bd3872252a4)), closes [#33](https://github.com/pustovitDmytro/semantic-release-heroku/issues/33)
+* Update dependency husky to v7 ([2e4d1d7](https://github.com/pustovitDmytro/semantic-release-heroku/commit/2e4d1d7c00a643760a3b49921b60b8e00cf3db22))
+
+### Upgrade
+
+* Update dependency base-api-client to v1.5.1 ([70924af](https://github.com/pustovitDmytro/semantic-release-heroku/commit/70924afcfac1679f7ecee864fbaaa1e9be4ba062))
+
 ## [1.1.17](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.16...v1.1.17) (2021-06-19)
 
 
