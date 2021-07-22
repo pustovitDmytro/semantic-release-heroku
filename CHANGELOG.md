@@ -1,3 +1,10 @@
+## [1.1.19](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.18...v1.1.19) (2021-07-22)
+
+
+### Upgrade
+
+* Update dependency base-api-client to v1.5.2 ([9836c95](https://github.com/pustovitDmytro/semantic-release-heroku/commit/9836c95683ffce6a604a9cb539c07d03d2a0d25a))
+
 ## [1.1.18](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.17...v1.1.18) (2021-07-17)
 
 
