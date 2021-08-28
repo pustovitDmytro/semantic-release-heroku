@@ -1,3 +1,38 @@
+## [1.1.20](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.19...v1.1.20) (2021-08-28)
+
+
+### Chore
+
+* adds 'typo' PR template ([e20404d](https://github.com/pustovitDmytro/semantic-release-heroku/commit/e20404d5f844e87f38558d6986e31df4c214fc3f))
+* adds bump strategy for devDependencies (non-major) ([03c9587](https://github.com/pustovitDmytro/semantic-release-heroku/commit/03c958728c482d04225d3368aebae8fadc7d6a4d))
+* adds CODE_OF_CONDUCT ([a969a8d](https://github.com/pustovitDmytro/semantic-release-heroku/commit/a969a8d7c4b9ea8552ef90d21d1cbef068c9ee4c))
+* adds gitleaks to circle pipeline ([114946e](https://github.com/pustovitDmytro/semantic-release-heroku/commit/114946e5b0a0ec0437929c5963e7efe258391b9e))
+* adds sonarcloud config ([c92973d](https://github.com/pustovitDmytro/semantic-release-heroku/commit/c92973d998ecee059594fbcdd35b9be0c08ffd0b))
+* combine mine packages in renovate updates ([54c97b8](https://github.com/pustovitDmytro/semantic-release-heroku/commit/54c97b8debfe5eae07fe83947378d03eaaea5763))
+* create auto pr for major dependencies ([d2583a6](https://github.com/pustovitDmytro/semantic-release-heroku/commit/d2583a6277808bbd2aa5ec69dbd1639c10458c9a))
+* enhance own updates commit messages ([49a2365](https://github.com/pustovitDmytro/semantic-release-heroku/commit/49a2365c0a49363e42365503939b98819a6c1864))
+* fixes renovate config ([982abaf](https://github.com/pustovitDmytro/semantic-release-heroku/commit/982abaf61a98de14dadc2fcb8b37b854577cbc64))
+* Lock file maintenance ([47bfacf](https://github.com/pustovitDmytro/semantic-release-heroku/commit/47bfacf4e2ffe672c96345481ddfa6811d4d4d69))
+* Lock file maintenance ([19c2389](https://github.com/pustovitDmytro/semantic-release-heroku/commit/19c23891056afb813e4dde92e7f40f0905896bc9))
+* Lock file maintenance ([2b00aec](https://github.com/pustovitDmytro/semantic-release-heroku/commit/2b00aec84097bd21c51a43ab785225798753dbae))
+* Lock file maintenance ([dea06c9](https://github.com/pustovitDmytro/semantic-release-heroku/commit/dea06c9d3e2dd4448e997ee081425b1a765fae87))
+* Lock file maintenance ([e0043d8](https://github.com/pustovitDmytro/semantic-release-heroku/commit/e0043d89de5576939e701f567ab1a871c2c8a057))
+* Lock file maintenance ([5d305a8](https://github.com/pustovitDmytro/semantic-release-heroku/commit/5d305a8337cccbb1efcb4885805960941f40b143))
+* Lock file maintenance ([cdf4f11](https://github.com/pustovitDmytro/semantic-release-heroku/commit/cdf4f112eebab895c624210cc672ab00ba2fa443))
+* not allow to fail on node 16 ([22ed683](https://github.com/pustovitDmytro/semantic-release-heroku/commit/22ed683ace773b242382c094b363a1713f9d8352))
+* Update commitlint monorepo to v13 ([9c65de3](https://github.com/pustovitDmytro/semantic-release-heroku/commit/9c65de393400118d7fe6834ba7df42e09959506d))
+* Update dependency eslint-plugin-regexp to ^0.12.0 ([51ff304](https://github.com/pustovitDmytro/semantic-release-heroku/commit/51ff3049b892e9ee5655761e53454e4c601fba27))
+* Update dependency eslint-plugin-regexp to ^0.13.0 (#36) ([3a8d3ec](https://github.com/pustovitDmytro/semantic-release-heroku/commit/3a8d3ecefa7c49575b4c6de6832690117d852dd7)), closes [#36](https://github.com/pustovitDmytro/semantic-release-heroku/issues/36)
+* Update dependency eslint-plugin-sonarjs to ^0.9.0 ([81d9681](https://github.com/pustovitDmytro/semantic-release-heroku/commit/81d9681ef601c70ee83a7ca26b199d647fc4ca0e))
+* Update dependency eslint-plugin-unicorn to v34 (#34) ([86efbac](https://github.com/pustovitDmytro/semantic-release-heroku/commit/86efbac96c6fbd1055c7e83fc3a42a861836b943)), closes [#34](https://github.com/pustovitDmytro/semantic-release-heroku/issues/34)
+* Update dependency husky to v7 ([3578711](https://github.com/pustovitDmytro/semantic-release-heroku/commit/35787117161955387aad52949d506c0fbaf42edf))
+* Update devDependencies (non-major) ([33211c3](https://github.com/pustovitDmytro/semantic-release-heroku/commit/33211c31d168fc187eb028f92eaeeff48ccfd085))
+* Update devDependencies (non-major) to v13 ([6894ad9](https://github.com/pustovitDmytro/semantic-release-heroku/commit/6894ad97aeac91f931506c360822f81c861e2e83))
+
+### Docs
+
+* update snyk badge ([a7fbb1d](https://github.com/pustovitDmytro/semantic-release-heroku/commit/a7fbb1d0e408bec8b8a8f37d1ffef3921d1dc106))
+
 ## [1.1.19](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.18...v1.1.19) (2021-07-22)
 
 
