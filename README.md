@@ -13,7 +13,7 @@
 [![Scrutinizer][scrutinizer-badge]][scrutinizer-url]
 
 [![Dependencies][badge-deps]][npm]
-[![Vulnerabilities][badge-vuln]](https://snyk.io/)
+[![Security][snyk-badge]][snyk-url]
 [![Build Status][tests-badge]][tests-url]
 [![Coverage Status][badge-coverage]][url-coverage]
 
@@ -109,11 +109,13 @@ Make the changes to the code and tests. Then commit to your branch. Be sure to f
 [github]: https://github.com/pustovitDmytro/semantic-release-heroku
 [coveralls]: https://coveralls.io/github/pustovitDmytro/semantic-release-heroku?branch=master
 [badge-deps]: https://img.shields.io/david/pustovitDmytro/semantic-release-heroku.svg
-[badge-vuln]: https://img.shields.io/snyk/vulnerabilities/npm/semantic-release-heroku.svg?style=popout
 [badge-vers]: https://img.shields.io/npm/v/semantic-release-heroku.svg
 [badge-lic]: https://img.shields.io/github/license/pustovitDmytro/semantic-release-heroku.svg
 [badge-coverage]: https://coveralls.io/repos/github/pustovitDmytro/semantic-release-heroku/badge.svg?branch=master
 [url-coverage]: https://coveralls.io/github/pustovitDmytro/semantic-release-heroku?branch=master
+
+[snyk-badge]: https://snyk-widget.herokuapp.com/badge/npm/semantic-release-heroku/badge.svg
+[snyk-url]: https://snyk.io/advisor/npm-package/semantic-release-heroku
 
 [tests-badge]: https://img.shields.io/circleci/build/github/pustovitDmytro/semantic-release-heroku
 [tests-url]: https://app.circleci.com/pipelines/github/pustovitDmytro/semantic-release-heroku

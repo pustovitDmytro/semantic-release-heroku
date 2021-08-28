@@ -1,5 +1,5 @@
 /* eslint-disable security/detect-object-injection */
-import sinon from 'sinon';
+import { replace } from 'sinon';
 import API_ERROR from 'base-api-client/lib/Error';
 import { assert } from 'chai';
 import { getNamespace } from 'cls-hooked';
@@ -66,6 +66,6 @@ class MOCK_API extends API {
 const methods = Object.getOwnPropertyNames(MOCK_API.prototype).filter(m => m !== 'constructor');
 
 methods.forEach(methodName => {
-    sinon.replace(API.prototype, methodName, MOCK_API.prototype[methodName]);
+    replace(API.prototype, methodName, MOCK_API.prototype[methodName]);
 });
 
