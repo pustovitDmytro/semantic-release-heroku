@@ -1,3 +1,15 @@
+## [1.1.21](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.20...v1.1.21) (2021-09-10)
+
+
+### Chore
+
+* Update devDependencies (non-major) ([f983fae](https://github.com/pustovitDmytro/semantic-release-heroku/commit/f983fae4c768282d018dc9aae28db8a73c2a822c))
+* Update devDependencies (non-major) (#45) ([415d610](https://github.com/pustovitDmytro/semantic-release-heroku/commit/415d610cb274ed6be102ec645ce615706655b080)), closes [#45](https://github.com/pustovitDmytro/semantic-release-heroku/issues/45)
+
+### Upgrade
+
+* package.json & package-lock.json to reduce vulnerabilities [base-api-client] ([3c197d4](https://github.com/pustovitDmytro/semantic-release-heroku/commit/3c197d4971b2e3e9887ca68092eb2bf4bd5d2fc2))
+
 ## [1.1.20](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.19...v1.1.20) (2021-08-28)
 
 
