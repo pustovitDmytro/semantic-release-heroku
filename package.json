@@ -95,7 +95,7 @@
     "uuid": "^8.3.2"
   },
   "dependencies": {
-    "base-api-client": "1.5.2",
+    "base-api-client": "1.5.3",
     "fs-extra": "10.0.0",
     "globby": "11.0.4",
     "libnpmversion": "1.2.1",
