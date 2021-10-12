@@ -4,6 +4,7 @@ import Heroku from './heroku/Heroku';
 
 export default async function publish(pluginConfig, { logger, nextRelease }) {
     if (!this.verified) throw new VERIFICATION_MISSED('publish');
+    if (this.verified.skip) return logger.warn(this.verified.message);
     const heroku = new Heroku(this.verified.name, this.verified.apiKey);
     const buildId = await heroku.deploy(this.verified.tarPath, nextRelease.version);
 

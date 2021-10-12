@@ -76,3 +76,17 @@ export function load(relPath, clearCache) {
 export function resolve(relPath) {
     return require.resolve(path.join(entry, relPath));
 }
+
+export class MockLogger {
+    constructor() {
+        this.messages = [];
+    }
+
+    warn(message) {
+        this.messages.push({ level: 'warn', message });
+    }
+
+    log(message) {
+        this.messages.push({ level: 'info', message });
+    }
+}

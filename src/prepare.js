@@ -6,6 +6,7 @@ import { tarball } from './utils';
 
 export default async function prepare(pluginConfig, { logger, nextRelease } = {}) {
     if (!this.verified) throw new VERIFICATION_MISSED('prepare');
+    if (this.verified.skip) return logger.warn(this.verified.message);
     if (this.verified.npmVersion) {
         await libnpmversion(nextRelease.version, {
             path             : this.verified.rootDir,

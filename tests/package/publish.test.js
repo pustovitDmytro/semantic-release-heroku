@@ -1,7 +1,7 @@
 import path from 'path';
 import { assert } from 'chai';
 import Tests, { load, tmpFolder, fixturesFolder } from '../Test';
-import { checkError } from '../utils';
+import { checkError, MockLogger } from '../utils';
 
 const { default: publish } = load('publish');
 const factory = new Tests();
@@ -58,4 +58,31 @@ test('Positive: deploy to heroku', async function () {
     const apiCalls = factory.getTraces();
 
     assert.lengthOf(apiCalls, 3);
+});
+
+test('Positive: filter branches', async function () {
+    const message = 'Skip branch staging, as plugin configured to only run from master';
+    const logger = new MockLogger();
+
+    await publish.call(
+        {
+            verified : {
+                skip : true,
+                message
+            }
+        },
+        null,
+        {
+            logger,
+            nextRelease : { version: '1.0.2' }
+        }
+    );
+
+    assert.lengthOf(factory.getTraces(), 0, 'api calls');
+
+    assert.lengthOf(logger.messages, 1);
+    assert.deepEqual(logger.messages[0], {
+        level : 'warn',
+        message
+    });
 });

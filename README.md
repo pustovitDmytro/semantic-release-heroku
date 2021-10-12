@@ -85,6 +85,7 @@ Config attribute description:
 | `name`          | no | ```string```  | Heroku application name.    | name from package.json |
 | `npmVersion`    | no | ```boolean``` | Whether to update package.json and package-lock with new version value | ```false```, package.json won't be touched      |
 | `tarballDir`    | no |  ```string```  | Path to directory, where you can keep generated tarball. | Tarball will be generated into os /tmp directory |
+| `branches`      | no | ```array``` | The branches on which releases should happen. Use branches filter for complex release workflows in cooperation with [workflow-configuration](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/workflow-configuration.md). |
 
 
 [sr-url]: https://github.com/semantic-release/semantic-release

@@ -1,4 +1,5 @@
 import path from 'path';
+import fs from 'fs-extra';
 import { validate } from './utils';
 import Heroku from './heroku/Heroku';
 
@@ -8,12 +9,14 @@ const rules = {
     rootDir    : [ 'required', 'string' ],
     npmVersion : [ 'boolean' ],
     tarballDir : [ 'string' ],
+    branches   : [ { 'list_of': 'string' } ],
     ignore     : [ { 'list_of': 'string' } ]
 };
 
-export default async function verifyConditions(pluginConfig, { logger, cwd, env }) {
+export default async function verifyConditions(pluginConfig, { logger, cwd, env, branch }) {
     // eslint-disable-next-line security/detect-non-literal-require
-    const info = require(path.resolve(cwd, 'package.json'));
+    const rootPackagePath = path.resolve(cwd, 'package.json');
+    const info = await fs.readJSON(rootPackagePath);
     const raw = {
         ...pluginConfig,
         name    : pluginConfig.name || info.name,
@@ -22,6 +25,16 @@ export default async function verifyConditions(pluginConfig, { logger, cwd, env 
     };
 
     const data = validate(raw, rules);
+
+    if (data.branches && !data.branches.includes(branch.name)) {
+        const message = `Skip branch ${branch.name}, as plugin configured to only run from ${data.branches.join(', ')}`;
+
+        logger.warn(message);
+        this.verified = { skip: true, message };
+
+        return;
+    }
+
     const heroku = new Heroku(data.name, data.apiKey);
 
     logger.log(`Verify Heroku authentication for ${data.name}`);
@@ -31,4 +44,3 @@ export default async function verifyConditions(pluginConfig, { logger, cwd, env 
     this.verified = data;
     logger.log(`Verified app ${data.name} [${appId}]`);
 }
-
