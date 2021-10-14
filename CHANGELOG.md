@@ -1,3 +1,33 @@
+# [1.2.0](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.21...v1.2.0) (2021-10-14)
+
+
+### Chore
+
+* adds  a security policy ([ed86aba](https://github.com/pustovitDmytro/semantic-release-heroku/commit/ed86aba2326eab4d7ef6045913a06b8e80b73dce))
+* adds circle-ci conditions ([5a40980](https://github.com/pustovitDmytro/semantic-release-heroku/commit/5a4098019c0450476f15cee293424d0ddcfb298c))
+* adds sponsorships ([35ed8e0](https://github.com/pustovitDmytro/semantic-release-heroku/commit/35ed8e0ddac94bdc52545be1d533be48495c8d60))
+* change renovate schedule ([b983eab](https://github.com/pustovitDmytro/semantic-release-heroku/commit/b983eab7c9bf231bcd38b95d74adbd2e0b519d7c))
+* fixes audit ([14597ff](https://github.com/pustovitDmytro/semantic-release-heroku/commit/14597ffa2ac256fdd24954569623ae9cf96e3bce))
+* fixes audit [devDependencies] ([d08b1fc](https://github.com/pustovitDmytro/semantic-release-heroku/commit/d08b1fc075b7eef59c59f755e1ee96748824e415))
+* fixes later schedule ([a0cfb5c](https://github.com/pustovitDmytro/semantic-release-heroku/commit/a0cfb5cbb1ca216b4a58bb8c644dc20359ae21b3))
+* Lock file maintenance ([29fe760](https://github.com/pustovitDmytro/semantic-release-heroku/commit/29fe76014232a02ab882c7b0f64c87138cc1999a))
+* Lock file maintenance ([9892cc5](https://github.com/pustovitDmytro/semantic-release-heroku/commit/9892cc51c4e0d99e41ce06568482891d30c78e70))
+* Lock file maintenance ([98e62b3](https://github.com/pustovitDmytro/semantic-release-heroku/commit/98e62b366b572d5154a2b409bda203c4ffa7d62e))
+* Lock file maintenance ([7af4484](https://github.com/pustovitDmytro/semantic-release-heroku/commit/7af448441cafbebb04557cf657a21e7e9faab355))
+* Lock file maintenance ([1ffc991](https://github.com/pustovitDmytro/semantic-release-heroku/commit/1ffc991529c6f05ea965e9217c215fad4fab2e59))
+* test-security in separete ci job ([a4bd846](https://github.com/pustovitDmytro/semantic-release-heroku/commit/a4bd846eefbe854e0b2a83adc80d2b4ab3aeedd5))
+* Update devDependencies (non-major) ([7246bdc](https://github.com/pustovitDmytro/semantic-release-heroku/commit/7246bdc1cc4d03cc7ddbc744f12e8a5da8e58822))
+* Update devDependencies (non-major) ([609151a](https://github.com/pustovitDmytro/semantic-release-heroku/commit/609151afd6bc58ff56003e33d85160cff9635b27))
+* Update devDependencies (non-major) ([c04775f](https://github.com/pustovitDmytro/semantic-release-heroku/commit/c04775f70c6a03036ea09b44ce610ddee5b5b835))
+* Update devDependencies (non-major) ([5b1a6c3](https://github.com/pustovitDmytro/semantic-release-heroku/commit/5b1a6c36373cd90d68dbb19cea6b59b3985f1468))
+* Update devDependencies (non-major) ([51200bf](https://github.com/pustovitDmytro/semantic-release-heroku/commit/51200bf4f3ac07c957f6861fd819319a28710689))
+* Update devDependencies (non-major) (#48) ([b3f6184](https://github.com/pustovitDmytro/semantic-release-heroku/commit/b3f6184966d64e7a20a5176ddca6c63d1e275520)), closes [#48](https://github.com/pustovitDmytro/semantic-release-heroku/issues/48)
+
+### New
+
+* adds branches filtering #50 ([76f7dcd](https://github.com/pustovitDmytro/semantic-release-heroku/commit/76f7dcdd2457f0206715287216ad43a6a62a67b5)), closes [#50](https://github.com/pustovitDmytro/semantic-release-heroku/issues/50)
+* override  settings on the branch level #50 ([f3b5b8e](https://github.com/pustovitDmytro/semantic-release-heroku/commit/f3b5b8ee4dcbdac45e9c0d313634990f262530f5)), closes [#50](https://github.com/pustovitDmytro/semantic-release-heroku/issues/50)
+
 ## [1.1.21](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.1.20...v1.1.21) (2021-09-10)
 
 
