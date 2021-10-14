@@ -60,7 +60,7 @@ test('Negative: cant connect heroku api', async function () {
     await checkError(
         verifyConditions.call(
             {},
-            { name: 'conncection-error' },
+            { name: 'connection-error' },
             {
                 cwd    : process.cwd(),
                 env    : { HEROKU_API_KEY: 'c5977e4b-970e-4965-aa69-85e781ab488c' },
@@ -103,4 +103,51 @@ test('Positive: filter branches', async function () {
     const apiCalls = factory.getTraces();
 
     assert.lengthOf(apiCalls, 0);
+});
+
+test('Positive: branches Config', async function () {
+    const context = {};
+    const logger = new MockLogger();
+
+    await verifyConditions.call(
+        context,
+        {
+            name     : 'master-name',
+            branches : [ 'master', {
+                branch : 'staging',
+                name   : 'staging-app'
+            } ]
+        },
+        {
+            cwd    : process.cwd(),
+            env    : { HEROKU_API_KEY: 'c5977e4b-970e-4965-aa69-85e781ab488c' },
+            logger,
+            branch : { name: 'staging' }
+        }
+    );
+    assert.lengthOf(logger.messages, 2);
+    assert.deepEqual(logger.messages, [
+        {
+            level   : 'info',
+            message : 'Verify Heroku authentication for staging-app'
+        },
+        { level: 'info', message: 'Verified app staging-app [1234]' }
+    ]);
+    assert.deepEqual(
+        context.verified,
+        {
+            name    : 'staging-app',
+            apiKey  : 'c5977e4b-970e-4965-aa69-85e781ab488c',
+            rootDir : process.cwd()
+        }
+    );
+
+    const apiCalls = factory.getTraces();
+
+    assert.lengthOf(apiCalls, 1);
+    assert.deepOwnInclude(apiCalls[0], {
+        method : 'GET',
+        url    : 'apps/staging-app',
+        api    : 'HerokuAPI'
+    });
 });

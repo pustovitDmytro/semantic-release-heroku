@@ -85,11 +85,43 @@ Config attribute description:
 | `name`          | no | ```string```  | Heroku application name.    | name from package.json |
 | `npmVersion`    | no | ```boolean``` | Whether to update package.json and package-lock with new version value | ```false```, package.json won't be touched      |
 | `tarballDir`    | no |  ```string```  | Path to directory, where you can keep generated tarball. | Tarball will be generated into os /tmp directory |
-| `branches`      | no | ```array``` | The branches on which releases should happen. Use branches filter for complex release workflows in cooperation with [workflow-configuration](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/workflow-configuration.md). |
+| `branches`      | no | ```array``` | The branches on which releases should happen. See details on [branches configuration](#branches). | -
 
+### branches
+semantic-release [allow to manage][sr-complex-workflows] and automate complex release workflows. You can vary plugin settings based on the target branch. Use the `branches` keyword for this:
+ 1. Skip specific branch from heroku deploy:
+   ```json
+    "branches": ["master", "next"],
+    "plugins": [
+        "@semantic-release/commit-analyzer",
+        "@semantic-release/release-notes-generator",
+        [ 
+            "semantic-release-heroku", {
+                "branches": ["master"]
+            } 
+        ]
+    ]
+   ```
+   here semantic release will run both *master* and *next* branches, but `semantic-release-heroku` will skip the *next* branch. 
+  
+  2. Use different plugin settings for contrasting branches. You can override any setting on the branch level. See example for custom app names:
+   ```json
+   [ 
+      "semantic-release-heroku", {
+          "branches": [
+            "master", 
+            { "branch": "next", "name": "staging-app" }
+          ],
+          "name": "production-app",
+          "npmVersion": true
+      } 
+   ]
+   ```
+   here for both *master* and *next* branches package.json version will be updated `("npmVersion": true)`. But Heroku apps will have different names (`staging-app` for *next* and `production-app` for *master* )
 
 [sr-url]: https://github.com/semantic-release/semantic-release
 [sr-config]: https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#configuration
+[sr-complex-workflows]: https://github.com/semantic-release/semantic-release/blob/master/docs/usage/workflow-configuration.md
 [h-url]: https://www.heroku.com/home
 [h-profile]: https://dashboard.heroku.com/account
 

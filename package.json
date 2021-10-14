@@ -102,6 +102,7 @@
     "libnpmversion": "1.2.1",
     "livr": "2.3.3",
     "livr-extra-rules": "1.2.1",
+    "myrmidon": "1.6.1",
     "tar-fs": "2.1.1"
   }
 }

@@ -51,8 +51,12 @@ class MOCK_API extends API {
             } });
         }
 
-        if (opts.url.match('conncection-error')) {
+        if (opts.url.match('connection-error')) {
             throw axiosError('Not Found');
+        }
+
+        if (opts.method === 'GET' && opts.url.match('apps/')) {
+            return axiosResponse({ id: 1234 });
         }
 
         return axiosResponse(1);
