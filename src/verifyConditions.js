@@ -5,10 +5,10 @@ import { validate } from './utils';
 import Heroku from './heroku/Heroku';
 
 const pluginConfigRules = {
-    name       : [ { like: '^[a-z][a-z0-9-]{1,28}[a-z0-9]$' } ],
+    name       : [ 'heroku-name' ],
     npmVersion : [ 'boolean' ],
     tarballDir : [ 'string' ],
-    ignore     : [ { 'list_of': 'string' } ]
+    ignore     : [ { 'every': 'string' } ]
 };
 
 const rules = {
@@ -18,9 +18,9 @@ const rules = {
 };
 
 const branchRules = {
-    branches : [ { 'list_of' : { 'or' : [
+    branches : [ { 'every' : { 'or' : [
         'string',
-        { 'nested_object' : {
+        { 'attributes' : {
             ...pluginConfigRules,
             branch : [ 'required', 'string' ]
         } }

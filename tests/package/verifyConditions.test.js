@@ -1,6 +1,7 @@
 /* eslint-disable unicorn/filename-case */
 // import { assert } from 'chai';
 import { assert } from 'chai';
+import { cleanUndefined } from 'myrmidon';
 import Test, { load, checkError, MockLogger } from '../Test';
 
 const factory = new Test();
@@ -20,7 +21,7 @@ test('Negative: validation failed', async function () {
 
         ),
         'VALIDATION_FAILED',
-        '{"apiKey":"NOT_UUID"}'
+        '{"apiKey":"NOT_UUID: The value is not a valid UUID v4"}'
     );
 });
 
@@ -38,7 +39,7 @@ test('Positive: valid config', async function () {
     );
 
     assert.deepEqual(
-        context.verified,
+        cleanUndefined(context.verified),
         {
             name    : 'package-name',
             apiKey  : 'c5977e4b-970e-4965-aa69-85e781ab488c',
@@ -134,7 +135,7 @@ test('Positive: branches Config', async function () {
         { level: 'info', message: 'Verified app staging-app [1234]' }
     ]);
     assert.deepEqual(
-        context.verified,
+        cleanUndefined(context.verified),
         {
             name    : 'staging-app',
             apiKey  : 'c5977e4b-970e-4965-aa69-85e781ab488c',

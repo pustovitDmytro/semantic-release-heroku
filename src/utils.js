@@ -3,12 +3,12 @@ import path from 'path';
 import tar from 'tar-fs';
 import fs from 'fs-extra';
 import { v4 as uuid } from 'uuid';
-import LIVR         from 'livr';
-import extraRules   from 'livr-extra-rules';
 import globby from 'globby';
-import { VALIDATION_FAILED } from './Error';
+import cottus from 'cottus';
 
-LIVR.Validator.registerDefaultRules(extraRules);
+import BaseCottusRule from 'cottus/lib/rules/Base';
+import BaseCottusError from 'cottus/lib/errors/format/Base';
+import { VALIDATION_FAILED } from './Error';
 
 export async function tarball(src, trg = os.tmpdir(), options = {}) {
     const { exclude = [ 'node_modules' ], include = [] } = options;
@@ -44,15 +44,34 @@ export async function tarball(src, trg = os.tmpdir(), options = {}) {
     return outFile;
 }
 
-export function validate(data, rules) {
-    const validator = new LIVR.Validator(rules).prepare();
-    const result = validator.validate(data);
+class HerokuNameError extends BaseCottusError {
+    message = 'Add-on app:name should follow pattern ^[a-z][a-z0-9-]{1,28}[a-z0-9]$'
 
-    if (!result) {
-        const fields = validator.getErrors();
+    code = 'WRONG_HEROKU_NAME'
+}
 
-        throw new VALIDATION_FAILED(fields);
+class HerokuNameRule extends BaseCottusRule {
+    static schema = 'heroku-name';
+
+    validate(input) {
+        const StringRule = this.cottus.rules.string;
+        const parentRule = this.createChildRule(StringRule);
+        const string = parentRule.validate(input);
+
+        if (!/^[a-z][\da-z-]{1,28}[\da-z]$/.test(string)) throw new HerokuNameError();
+
+        return string;
     }
+}
 
-    return result;
+cottus.addRule(HerokuNameRule);
+
+export function validate(data, rules) {
+    const validator = cottus.compile([ 'required', { 'attributes': rules } ]);
+
+    try {
+        return validator.validate(data);
+    } catch (error) {
+        throw new VALIDATION_FAILED(JSON.parse(error.prettify));
+    }
 }
