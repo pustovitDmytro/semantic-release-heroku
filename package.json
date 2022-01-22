@@ -94,7 +94,7 @@
   "dependencies": {
     "base-api-client": "1.5.3",
     "fs-extra": "10.0.0",
-    "globby": "11.0.4",
+    "globby": "12.2.0",
     "libnpmversion": "1.2.1",
     "livr": "2.3.3",
     "livr-extra-rules": "1.2.1",
