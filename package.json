@@ -1,6 +1,6 @@
 {
   "name": "semantic-release-heroku",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "plugin to publish a Heroku App using semantic-releases",
   "main": "./lib",
   "keywords": [
