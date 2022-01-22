@@ -28,14 +28,14 @@
   - [Contribute](#contribute)
 
 ## Requirements
-[![Platform Status][appveyor-badge]][appveyor-url]
+[![Platform Status][node-ver-test-badge]][node-ver-test-url]
 
 To use library you need to have [node](https://nodejs.org) and [npm](https://www.npmjs.com) installed in your machine:
 
 * node `>=10`
 * npm `>=6`
 
-Package is [continuously tested][appveyor-url] on darwin, linux, win32 platforms. All active and maintenance [LTS](https://nodejs.org/en/about/releases/) node releases are supported.
+Package is [continuously tested][node-ver-test-url] on darwin, linux and win32 platforms. All active and maintenance [LTS](https://nodejs.org/en/about/releases/) node releases are supported.
 
 This package is shipped as [semantic-release][sr-url] plugin, so you need to have semantic-release installed and configured.
 
@@ -141,7 +141,7 @@ Make the changes to the code and tests. Then commit to your branch. Be sure to f
 [npm]: https://www.npmjs.com/package/semantic-release-heroku
 [github]: https://github.com/pustovitDmytro/semantic-release-heroku
 [coveralls]: https://coveralls.io/github/pustovitDmytro/semantic-release-heroku?branch=master
-[badge-deps]: https://img.shields.io/david/pustovitDmytro/semantic-release-heroku.svg
+[badge-deps]: https://img.shields.io/librariesio/release/npm/semantic-release-heroku.svg
 [badge-vers]: https://img.shields.io/npm/v/semantic-release-heroku.svg
 [badge-lic]: https://img.shields.io/github/license/pustovitDmytro/semantic-release-heroku.svg
 [badge-coverage]: https://coveralls.io/repos/github/pustovitDmytro/semantic-release-heroku/badge.svg?branch=master
@@ -177,8 +177,8 @@ Make the changes to the code and tests. Then commit to your branch. Be sure to f
 [npm-size-badge]: https://img.shields.io/bundlephobia/min/semantic-release-heroku
 [npm-size-url]: https://bundlephobia.com/result?p=semantic-release-heroku
 
-[appveyor-badge]: https://ci.appveyor.com/api/projects/status/9qu5eo8au95gs5om/branch/master?svg=true
-[appveyor-url]: https://ci.appveyor.com/project/pustovitDmytro/semantic-release-heroku/branch/master
+[node-ver-test-badge]: https://github.com/pustovitDmytro/semantic-release-heroku/actions/workflows/npt.yml/badge.svg?branch=master
+[node-ver-test-url]: https://github.com/pustovitDmytro/semantic-release-heroku/actions?query=workflow%3A%22Node.js+versions%22
 
 [fossa-badge]: https://app.fossa.com/api/projects/custom%2B24828%2Fsemantic-release-heroku.svg?type=shield
 [fossa-url]: https://app.fossa.com/projects/custom%2B24828%2Fsemantic-release-heroku?ref=badge_shield
