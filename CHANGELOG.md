@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.2.1...v1.3.0) (2022-01-22)
+
+
+### New
+
+* use cottus validator ([7be525d](https://github.com/pustovitDmytro/semantic-release-heroku/commit/7be525d23bbe70cf24c7573990e7cddc02582f30))
+
 ## [1.2.1](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.2.0...v1.2.1) (2022-01-22)
 
 
