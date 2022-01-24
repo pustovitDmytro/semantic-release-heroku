@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.3.1...v1.3.2) (2022-01-24)
+
+
+### Upgrade
+
+* Update dependency libnpmversion to v2 (#49) ([5229e7f](https://github.com/pustovitDmytro/semantic-release-heroku/commit/5229e7fee444cffa36787582d4d72fec34d7a351)), closes [#49](https://github.com/pustovitDmytro/semantic-release-heroku/issues/49)
+
 ## [1.3.1](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.3.0...v1.3.1) (2022-01-24)
 
 
