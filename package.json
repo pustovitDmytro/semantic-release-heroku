@@ -95,7 +95,7 @@
     "base-api-client": "1.5.3",
     "cottus": "1.10.2",
     "fs-extra": "10.0.0",
-    "globby": "11.0.4",
+    "globby": "11.1.0",
     "libnpmversion": "1.2.1",
     "myrmidon": "1.6.1",
     "tar-fs": "2.1.1"
