@@ -1,3 +1,14 @@
+## [1.3.4](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.3.3...v1.3.4) (2022-02-04)
+
+
+### Chore
+
+* fixes some npm audit vulnerabilities (#66) ([d3ac0e4](https://github.com/pustovitDmytro/semantic-release-heroku/commit/d3ac0e4fbe00efbb8668abb20004af8f284af639)), closes [#66](https://github.com/pustovitDmytro/semantic-release-heroku/issues/66)
+
+### Upgrade
+
+* Update pustovitDmytro's packages (#68) ([20ac86b](https://github.com/pustovitDmytro/semantic-release-heroku/commit/20ac86b940c9cd25b8a5e9311bc82a8e477e389c)), closes [#68](https://github.com/pustovitDmytro/semantic-release-heroku/issues/68)
+
 ## [1.3.3](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.3.2...v1.3.3) (2022-01-26)
 
 
