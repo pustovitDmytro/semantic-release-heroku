@@ -1,3 +1,4 @@
+![Logo](.docs/logo_250.png "semantic-release-heroku")
 # semantic-release-heroku
 [semantic-release][sr-url] plugin. Provides the ability to publish [Heroku][h-url] apps.
 
