@@ -1,3 +1,33 @@
+## [1.3.5](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.3.4...v1.3.5) (2023-02-07)
+
+
+### Chore
+
+* anti-terrorism disclaimer ([96327fe](https://github.com/pustovitDmytro/semantic-release-heroku/commit/96327fef4c90f65fd297960d73872398334774c5))
+* fixes eslint-plugin-unicorn version ([dd45e9a](https://github.com/pustovitDmytro/semantic-release-heroku/commit/dd45e9a86498e621de2cd9bc49aa1f8430c8ed6c))
+* fixes npm audit ([0500470](https://github.com/pustovitDmytro/semantic-release-heroku/commit/05004700c0fd75120bebf51a70e25dfee1e3b840))
+* fixes some npm audit vulnerabilities ([b913fee](https://github.com/pustovitDmytro/semantic-release-heroku/commit/b913feef549bb124a121f8b0ff3b56148321140a))
+* fixes some npm audit vulnerabilities (#86) ([eb549de](https://github.com/pustovitDmytro/semantic-release-heroku/commit/eb549de6e36aba89fdf308f053f487c5bed0e1aa)), closes [#86](https://github.com/pustovitDmytro/semantic-release-heroku/issues/86)
+* Lock file maintenance ([85b7c09](https://github.com/pustovitDmytro/semantic-release-heroku/commit/85b7c09390c7a91407dd35ae8d997982a15ecc1a))
+* Lock file maintenance (#51) ([77278dd](https://github.com/pustovitDmytro/semantic-release-heroku/commit/77278dd75d8edb650de979d137085ee44081f935)), closes [#51](https://github.com/pustovitDmytro/semantic-release-heroku/issues/51)
+* Lock file maintenance (#69) ([4d19321](https://github.com/pustovitDmytro/semantic-release-heroku/commit/4d19321465b56b9e8cc5a243612f3cde0657c0be)), closes [#69](https://github.com/pustovitDmytro/semantic-release-heroku/issues/69)
+* Update dependency danger to v11 ([1779a27](https://github.com/pustovitDmytro/semantic-release-heroku/commit/1779a271eb3527ca1e6e5e5354cb3294ff6797e5))
+* Update dependency nanoid to 3.1.31 [SECURITY] (#83) ([89d3014](https://github.com/pustovitDmytro/semantic-release-heroku/commit/89d30145ca8e48ab718b3a3d6ca376d6972e3ce1)), closes [#83](https://github.com/pustovitDmytro/semantic-release-heroku/issues/83)
+* Update dependency node-fetch to 2.6.7 [SECURITY] (#84) ([11e82bc](https://github.com/pustovitDmytro/semantic-release-heroku/commit/11e82bc5133b8b2d7bc18fa7730252c6068e134b)), closes [#84](https://github.com/pustovitDmytro/semantic-release-heroku/issues/84)
+* Update devDependencies (non-major) ([01bd6c0](https://github.com/pustovitDmytro/semantic-release-heroku/commit/01bd6c09f1ba5886abdb991b436317f741eeb20b))
+* Update devDependencies (non-major) ([85a0161](https://github.com/pustovitDmytro/semantic-release-heroku/commit/85a0161b7426b877ec45f6956238f93810e5b3c9))
+* Update devDependencies (non-major) (#56) ([fbf30b1](https://github.com/pustovitDmytro/semantic-release-heroku/commit/fbf30b10614611f5556ac0880d471055f4e69517)), closes [#56](https://github.com/pustovitDmytro/semantic-release-heroku/issues/56)
+* Update devDependencies (non-major) (#65) ([d60ef28](https://github.com/pustovitDmytro/semantic-release-heroku/commit/d60ef28cb4cbf187b61fd4c5b70b3bfb5338e6c0)), closes [#65](https://github.com/pustovitDmytro/semantic-release-heroku/issues/65)
+* Update devDependencies (non-major) (#66) ([69aac8f](https://github.com/pustovitDmytro/semantic-release-heroku/commit/69aac8f4b52fcb9a626780be4c14d211f86b62b6)), closes [#66](https://github.com/pustovitDmytro/semantic-release-heroku/issues/66)
+* Update devDependencies (non-major) (#92) ([f492769](https://github.com/pustovitDmytro/semantic-release-heroku/commit/f492769892ff31c1dad30248c58ae7c5ae7aec85)), closes [#92](https://github.com/pustovitDmytro/semantic-release-heroku/issues/92)
+
+### Docs
+
+* add logo ([7e80a82](https://github.com/pustovitDmytro/semantic-release-heroku/commit/7e80a825453049ad8eee7cf036c505ab0007ec04))
+* drop lgtm ([b1841f2](https://github.com/pustovitDmytro/semantic-release-heroku/commit/b1841f24770563faafb609444868658fba298b81))
+* help Ukraine 🇺🇦 ([bec6d65](https://github.com/pustovitDmytro/semantic-release-heroku/commit/bec6d65bf6dc9da64bbfc3d85b0d267568e3e232))
+* update year in license ([64521cb](https://github.com/pustovitDmytro/semantic-release-heroku/commit/64521cb04f41c46b7bdcbba18bec8d4673736a31))
+
 ## [1.3.4](https://github.com/pustovitDmytro/semantic-release-heroku/compare/v1.3.3...v1.3.4) (2022-02-04)
 
 
