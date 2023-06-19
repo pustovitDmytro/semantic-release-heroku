@@ -94,7 +94,7 @@
   "dependencies": {
     "base-api-client": "1.5.8",
     "cottus": "1.10.6",
-    "fs-extra": "10.0.0",
+    "fs-extra": "10.1.0",
     "globby": "11.1.0",
     "libnpmversion": "2.0.2",
     "myrmidon": "1.7.2",
