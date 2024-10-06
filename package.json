@@ -96,7 +96,7 @@
     "cottus": "1.10.6",
     "fs-extra": "10.1.0",
     "globby": "11.1.0",
-    "libnpmversion": "2.0.2",
+    "libnpmversion": "7.0.0",
     "myrmidon": "1.7.2",
     "tar-fs": "2.1.1"
   }
