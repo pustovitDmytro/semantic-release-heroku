@@ -92,12 +92,12 @@
     "uuid": "^8.3.2"
   },
   "dependencies": {
-    "base-api-client": "1.5.8",
-    "cottus": "1.10.6",
+    "base-api-client": "1.5.10",
+    "cottus": "1.11.0",
     "fs-extra": "10.1.0",
     "globby": "11.1.0",
     "libnpmversion": "2.0.2",
-    "myrmidon": "1.7.2",
+    "myrmidon": "1.10.0",
     "tar-fs": "2.1.1"
   }
 }
